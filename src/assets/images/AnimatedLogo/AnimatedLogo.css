@@ -1,3 +1,35 @@
+.animatedLogoWrapp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+.animatedLogoWrapp .animatedLogo-prim{
+  width: 38rem;
+  height: 8.55;
+}
+
+.animatedLogoWrapp .animatedLogo-sec{
+  display: none;
+}
+
+
+@media (max-width: 810px) {
+  .animatedLogoWrapp .animatedLogo-prim{
+    display: none;
+  }
+
+.animatedLogoWrapp .animatedLogo-sec{
+    display: inline;
+  }
+  
+}
+/* .animatedLogoWrapp svg {
+  width: 100%;
+  height: 100%;
+} */
 
  @-webkit-keyframes animate-svg-fill-1 {
   0% {

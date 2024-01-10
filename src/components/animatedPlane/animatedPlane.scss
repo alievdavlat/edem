@@ -7,11 +7,10 @@
   max-width: 100%; 
   display: flex;
   align-items: center;
-  bottom: -11rem;
-  // background: skyblue;
+  bottom: -7rem;
   &-lastImage{
     position: absolute;
-    bottom: -12rem;
+    bottom: -5rem;
 
   }
 
@@ -47,8 +46,18 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
   .planeImage {
     width: 80%;
+  }
+
+  .animatedPlane {
+    bottom: -5rem;
+    &-lastImage{
+      position: absolute;
+      bottom: 1rem;
+  
+    }
+  
   }
 }

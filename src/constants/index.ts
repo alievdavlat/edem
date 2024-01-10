@@ -131,6 +131,18 @@ export const cloudsItems = [
   {
     id:10,
     image:cloud10
+  },
+  {
+    id:11,
+    image:cloud8
+  },
+  {
+    id:12,
+    image:cloud9
+  },
+  {
+    id:13,
+    image:cloud10
   }
 ]
 
@@ -1473,7 +1485,13 @@ export const reviewsData = {
   ]
 }
 
-
+export const phoneNumbers = [
+  '+998 94 601 33 22',
+  '+998 97 908 33 22',
+  '+998 78 140 10 06',
+  '+998 99 604 32 22',
+  '+998 97 870 33 22'
+]
 
 
 

@@ -2,10 +2,9 @@
 import '../assets/styles/global.css'
 import '../assets/styles/normalize.css'
 import { useEffect, useState } from 'react'
-import { redirect } from 'next/navigation'
 import Preloader from './preloader/Preloader'
-import Navbar from '@/components/header/Navbar'
 import Footer from '@/components/footer/Footer'
+import Navbar from '@/components/navbar/Navbar'
 
 
 
