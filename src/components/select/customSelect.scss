@@ -1,0 +1,122 @@
+.tourSelect{
+ margin-top: 2rem;
+ position: absolute;
+bottom: 8rem;
+z-index: 999;
+background: white;
+
+
+&-form{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 10rem;
+  
+  .btn{
+    border-radius: 2.1rem;
+    background: #67420E;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .95rem 3.9rem;
+    margin-top: 1.1rem; 
+    border: none;
+    outline: none;
+    transition: all .4s;
+
+    svg{
+      margin-left: .5rem;
+    }
+    &:hover{
+      background: white;
+      color: #67420E;
+      border: 1px solid #67420E;
+
+      svg{
+        fill: #67420E;
+      }
+    }
+  }
+
+  &-wrap{
+    p {
+      color: #000;
+      font-size: 0.8rem;
+      font-weight: 500;
+      font-family: var(--fm);
+      margin-left: 0.5rem !important;
+    }
+  }
+  &-select{
+    margin-top: 0.5rem;
+    display: flex;
+    width: 19.3rem;
+    border: 1px solid #67420E;
+    border-radius: 1.45rem;
+    position: relative;
+    margin-right: 1.5rem;
+    padding: 0.65rem .5rem .75rem 1rem;
+    align-items: center;
+
+    img{
+      width: 1.1rem;
+      margin-right: 0.5rem;
+    }
+
+    &-arrow{
+      border: none;
+      outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.3rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: #67420E;
+      color: white;
+      cursor: pointer;
+      transition: all .4s;
+      &:hover,
+      &:active{
+        background: white;
+        border: 1px solid #67420E;
+        color: #67420E;
+      }
+      svg{
+        fill: white;
+      }
+    }
+    select{
+      width: 100%;
+      height: 100%;
+      border: none;   
+      outline: none; 
+      appearance: none;
+      &:active,
+      &:focus{
+        border: none;   
+        outline: none; 
+      }
+
+      option {
+        font-size: 1.1rem;
+        font-weight: 700;
+        font-family: var(--fj);
+        color: #67420E;
+        border: 1px solid #67420E;
+        border-radius: 3rem;
+        &:checked,
+        &:active,
+        &:focus,
+        &:hover{
+          background-color: #67420E !important;
+          color: white !important;
+        }
+        
+       
+      }
+    }
+  }
+}
+}

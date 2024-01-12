@@ -1,63 +1,59 @@
-/* AnimatedPlane.css */
-.animatedPlane {
-  position: relative;
+.homeHero-animation{
+  height: 36rem;
   width: 100%;
-  height: 23rem;
-  overflow: hidden;
-  max-width: 100%; 
-  display: flex;
-  align-items: center;
-  bottom: -7rem;
-  &-lastImage{
-    position: absolute;
-    bottom: -5rem;
-
-  }
-
-}
-
-.animatedPlane2{
+  background: url(../../assets/images/cloud_back.png) bottom center no-repeat;
+  background-size: 100%;
   position: relative;
-  width: 100%;
-  height: 12.35rem;
-  overflow: hidden;
-  max-width: 100%; 
-  display: flex;
-  align-items: center;
-}
-
-
-.planeImage {
-  position: absolute;
-  width: 42.1rem; 
-  max-width: 42.1rem; 
-  height: 12.35rem; 
-  object-fit: contain;
-  z-index: 99;
-  animation: moveRight 12s linear infinite;
-}
-
-@keyframes moveRight {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-@media screen and (max-width: 810px) {
-  .planeImage {
-    width: 80%;
-  }
-
-  .animatedPlane {
-    bottom: -5rem;
-    &-lastImage{
-      position: absolute;
-      bottom: 1rem;
-  
+  pointer-events: none;
+  z-index: 1;
+  bottom: 5rem;
+  &-plane{
+    overflow: hidden;
+    img {
+      margin-top: 3rem;
+      width: 100%;
+      display: block;
+      width: 63rem;
+      animation: movePlane 10s linear infinite;
+      transform: translateX(-100%);
+      
     }
-  
   }
+
+  &-cloud{
+      position: absolute;
+			width: 90%;
+			height: 36rem;
+			right: 0;
+			bottom: -3rem;
+
+      img {
+				width: 100%;
+				height: 100%;
+				display: block;
+				object-fit: contain;
+				object-position: right;
+			}
+
+  }
+
+
+
+}
+
+
+
+
+@keyframes movePlane {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	70% {
+		transform: translateX(100vw);
+	}
+
+	100% {
+		transform: translateX(100vw);
+	}
 }

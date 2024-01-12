@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react'
 import Preloader from './preloader/Preloader'
 import Footer from '@/components/footer/Footer'
 import Navbar from '@/components/navbar/Navbar'
+import FixedBtn from '@/components/fixedBtn/FixedBtn'
+import Head from 'next/head'
 
 
 
@@ -19,7 +21,7 @@ const Providers = ({
   useEffect(() => {
     setTimeout(() => {
      setShowPreload(false)
-    }, 2500);
+    }, 2000);
   } ,[])
 
 
@@ -28,6 +30,7 @@ const Providers = ({
     {
       showPreload ? <Preloader/> :
      <>
+      <FixedBtn/>
      <Navbar/>
     { children}
     <Footer/>
