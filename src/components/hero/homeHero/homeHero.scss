@@ -2,10 +2,9 @@
   padding-top: 7.5rem;
 	position: relative;
   margin-top:  5rem;
-  
   &::after {
 		background: #704c1aff url(../../../assets/images/pattern.png) top center no-repeat;
-		background-size: cover;
+		background-size: 100%;
 		content: '';
 		z-index: -1;
 		position: absolute;
@@ -47,7 +46,8 @@
   
   .homeHero {
     &::after {
-      background-size: cover;
+      background-size:100%;
+    width: 100% !important;
     }
 
     &-content{
@@ -97,6 +97,8 @@
   }
   .homeHero {
 		padding-top: 4.5rem;
+    margin-top: 0;
+
 
 		&::after {
 			height: 33rem;
@@ -135,4 +137,10 @@
 			margin: -4.5rem 0 7.95rem;
 		}
 	}
+}
+
+@media (max-width:1780px) {
+.homeHero{
+  margin-top: 0;
+}
 }

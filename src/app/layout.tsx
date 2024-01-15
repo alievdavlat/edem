@@ -1,12 +1,12 @@
 'use client'
 import '../assets/styles/global.css'
 import '../assets/styles/normalize.css'
+import '../assets/styles/animate.css'
 import { useEffect, useState } from 'react'
 import Preloader from './preloader/Preloader'
 import Footer from '@/components/footer/Footer'
 import Navbar from '@/components/navbar/Navbar'
 import FixedBtn from '@/components/fixedBtn/FixedBtn'
-import Head from 'next/head'
 
 
 

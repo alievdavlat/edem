@@ -3,11 +3,15 @@ import calendarIcon from "../../assets/images/calendar.svg";
 import pinIcon from "../../assets/images/pin.svg";
 import planeBrwon from "../../assets/images/planebtn.svg";
 import "./customSelect.css";
-import { HiOutlineArrowLongDown } from "react-icons/hi2";
+import { HiOutlineArrowLongDown, HiOutlineArrowLongUp } from "react-icons/hi2";
 import { TiPlane } from "react-icons/ti";
 
 
 const CustomSelect = () => {
+
+  const [openDrop1, setOpenDrop1] = React.useState(false)
+  const [openDrop2, setOpenDrop2] = React.useState(false)
+
   return (
     <div className="tourSelect">
       <div className="container">
@@ -17,7 +21,7 @@ const CustomSelect = () => {
             <div className="tourSelect-form-select">
               <img src={pinIcon.src} alt="ico" />
 
-              <select>
+              <select onClick={() => setOpenDrop1(!openDrop1)}>
                 <option value="1">Турция</option>
                 <option value="1">Египет</option>
                 <option value="1">Тайланд</option>
@@ -26,7 +30,11 @@ const CustomSelect = () => {
               </select>
 
 							<div className="tourSelect-form-select-arrow">
-							<HiOutlineArrowLongDown />
+							{
+                openDrop1 
+                ? <HiOutlineArrowLongDown />
+                : <HiOutlineArrowLongUp/>
+              }
 							</div>
 							
             </div>
@@ -37,7 +45,7 @@ const CustomSelect = () => {
             <div className="tourSelect-form-select">
               <img src={calendarIcon.src} alt="ico" />
 
-              <select >
+              <select  onClick={() => setOpenDrop2(!openDrop2)}>
                 <option value="1">Январь</option>
                 <option value="1">Февраль</option>
                 <option value="1">Март</option>
@@ -52,7 +60,11 @@ const CustomSelect = () => {
                 <option value="1">Декабрь</option>
               </select>
 							<div className="tourSelect-form-select-arrow">
-							<HiOutlineArrowLongDown />
+							{
+                openDrop2 
+                ? <HiOutlineArrowLongDown />
+                : <HiOutlineArrowLongUp/>
+              }
 							</div>
             </div>
           </div>

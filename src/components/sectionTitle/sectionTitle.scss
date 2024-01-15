@@ -1,0 +1,38 @@
+.sectioTitle{
+  h2{
+    color: #67420E;
+    font-family: var(--fj);
+    font-size: 2.5rem;
+    font-weight: 600;
+    position: relative;
+
+    img{
+      width: 4.159rem;
+      height: 3.1rem;
+      object-fit: contain;
+      position: absolute;
+    }
+  }
+ 
+
+  
+}
+
+
+@media (max-width:768px) {
+  .sectioTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h2{
+     font-size: 1.3rem; 
+
+     img{
+      top: -2rem;
+      left: -4.5rem;
+      transform:rotate(-45deg);
+
+     }
+    }
+  }
+}
