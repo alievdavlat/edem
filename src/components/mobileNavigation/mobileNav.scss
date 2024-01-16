@@ -1,0 +1,128 @@
+.mobileNav-wrapp{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mobileNav{
+  position: fixed;
+  top: 20rem;
+  display: flex;
+  box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.05);
+  z-index: 999999999;
+  width: 100%;
+  border-radius:1rem 1rem  0rem 0rem;
+  padding:.5rem  0.5rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+  .activeItem{
+    position: relative;
+    background: white;
+    border-radius: 50%;
+    padding: .6rem;
+    top: -1rem;
+    transition: all .5;
+    animation-name: toLeft;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+
+    &:hover{
+      a{
+        svg{
+          path{
+            stroke: #fff;
+          }
+        }
+      }
+    }
+      a{
+        div{
+          transition: all .4;
+          width: 3rem;
+          height: 3rem;
+          background: #67420E;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin-bottom: .3rem;
+
+          svg{
+            path{
+              stroke: white;
+              transition: all .4;
+            }
+          }
+        }
+      }
+  }
+
+  li{
+    margin-right: 1.6rem;
+    transition: all .4s;
+    &:active,
+    &:hover{
+      a{
+        span{
+          font-weight: 600;
+        }
+
+        svg{
+          path{
+            transition: all .4s;
+            stroke:#704c1aff;
+          } 
+        }
+      }
+    }
+
+   
+
+    a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: .5rem;
+    transition: all .4s;
+
+    span{
+      color: #000;
+      font-size: 0.55rem;
+      font-family: var(--fm);
+      font-weight: 400;
+      transition: all .4s;
+
+    }
+
+    }
+    &:last-of-type{
+      margin-right: 0rem;
+    }
+
+    
+  }
+}
+
+
+@media (max-width:1024px) {
+  .mobileNav-wrapp{
+    display: flex;
+  }
+}
+
+
+@keyframes toLeft {
+  0%{
+    opacity: 0;
+    // transform: translateX(5px);
+  } 100%{
+    opacity: 1;
+    // transform: translateX(0px);
+  }
+}

@@ -7,12 +7,24 @@ import { IoLocation } from "react-icons/io5";
 import { phoneNumbers } from "@/constants";
 import { MapComp } from "..";
 import { FaPhoneAlt } from "react-icons/fa";
+import { IoIosArrowUp } from "react-icons/io";
 
 const Footer = () => {
- 
+ const  scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' 
+  });
+};
+
   return (
     <footer className="footer">
       <div className="container">
+       <div className="footer-scrollTop">
+       <button onClick={scrollToTop}>
+        <IoIosArrowUp />
+        </button>
+       </div>
         <div className="footer-top">
 
           <Link href={"/"} className="footer-top-logo">
@@ -64,6 +76,14 @@ const Footer = () => {
         <div className="footer-bottom">
           <MapComp/>
         </div>
+
+          <div className="footer-info">
+            <p>© EDEM TRAVEL AGENCY 2023</p>
+
+            <a href="https://www.novastudio.uz/" target="_blank">
+            created by NOVAS
+            </a>
+          </div>
       </div>
     </footer>
   );

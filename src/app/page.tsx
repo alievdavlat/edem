@@ -1,7 +1,6 @@
 'use client'
-import { HomeHero, HotTours, Popular } from '@/components'
+import { ContactForm, Exclusive, HomeHero, HotTours, Popular, Socials } from '@/components'
 import React from 'react'
-
 type Props = {}
 
 const page = (props: Props) => {
@@ -10,6 +9,9 @@ const page = (props: Props) => {
     <HomeHero/>
     <Popular/>
     <HotTours/>
+    <Exclusive/>
+    <ContactForm/>
+    <Socials/>
    </div>
   )
 }

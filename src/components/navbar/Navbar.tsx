@@ -6,10 +6,17 @@ import logo from '../../assets/images/logo.svg'
 import { FaPhoneAlt } from "react-icons/fa";
 import menu from '../../assets/images/menu.svg'
 import './navbar.css'
+import { useDispatch } from 'react-redux'
+import { openModal } from '@/redux/features/modalSlice'
 
 
 
 const Navbar = () => {
+
+  const dispatch = useDispatch()
+  
+
+  
   return (
     <header className='header'>
 
@@ -46,7 +53,7 @@ const Navbar = () => {
 
             <div className='header-navigation-right'>
 
-              <div className='header-navigation-right-lang'>
+              <div className='header-navigation-right-lang' onClick={() => dispatch(openModal({child:1, open:true}))}>
                 <img src={ruFlag.src} alt="flag_ru" />
                 <span>Ру</span>
               </div>

@@ -1,13 +1,16 @@
 'use client'
 import '../assets/styles/global.css'
 import '../assets/styles/normalize.css'
-import '../assets/styles/animate.css'
 import { useEffect, useState } from 'react'
 import Preloader from './preloader/Preloader'
 import Footer from '@/components/footer/Footer'
 import Navbar from '@/components/navbar/Navbar'
 import FixedBtn from '@/components/fixedBtn/FixedBtn'
-
+import MobileNavigation from '@/components/mobileNavigation/MobileNavigation'
+import { Provider, useSelector } from 'react-redux'
+import { store } from '@/redux/store'
+import CustomModal from '@/components/customModal/CustomModal'
+import LanguageContent from '@/components/customModal/languageContent/LanguageContent'
 
 
 const Providers = ({
@@ -17,6 +20,8 @@ const Providers = ({
 }) => {
 
   const [showPreload, setShowPreload] = useState(true)
+  const {child, isOpen}  = useSelector((state:any) => state.modal)
+  
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,10 +32,22 @@ const Providers = ({
 
   return (
     <div className='layout'>
+
+      
     {
       showPreload ? <Preloader/> :
      <>
-      <FixedBtn/>
+
+    {
+    isOpen &&
+      <CustomModal>
+        {
+          child == 1 && <LanguageContent/>
+        }
+      </CustomModal>
+    }
+    <MobileNavigation/>
+    <FixedBtn/>
      <Navbar/>
     { children}
     <Footer/>
@@ -52,11 +69,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+      <Provider store={store}>
+
         <Providers>
           {
             children
           }
         </Providers>
+        </Provider>
       </body>
     </html>
   )

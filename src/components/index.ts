@@ -7,7 +7,9 @@ import Popular from './popular/Popular'
 import SectionTitle from './sectionTitle/SectionTitle'
 import HotTours from './hotTours/HotTours'
 import HotToursItem from './hotTours/HotToursItem'
-
+import Exclusive from './exclusive/Exclusive'
+import ContactForm from './contactForm/ContactForm'
+import Socials from './socials/Socials'
 export {
   AnimatedPlane,
   Footer,
@@ -17,6 +19,10 @@ export {
   SectionTitle,
   Popular,
   HotTours,
-  HotToursItem
+  HotToursItem,
+  Exclusive,
+  ContactForm,
+  Socials
+
 
 }

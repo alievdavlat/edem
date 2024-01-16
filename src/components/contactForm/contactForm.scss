@@ -1,0 +1,251 @@
+.consult {
+	padding: 7.5rem 0;
+	position: relative;
+	overflow: hidden;
+
+	&-form{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 100%;
+		input{
+			padding: .9rem 1.5rem;
+			color: rgba(255, 255, 255, 0.51);
+			font-size: .8rem;
+			font-weight: 400;
+			background: transparent;
+			border-radius: 2.5rem;
+			border: 1.5px solid #E6BCA4;
+			width: 100%;
+			margin-bottom: 1rem;
+			outline: none;
+			transition: all .4s;
+
+			&:last-of-type{
+				appearance: none !important; 
+			}
+			&:hover{
+				border: 1px solid white;
+			}
+		}
+
+		button{
+			padding: 0.85rem 5.95rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #67420E;
+			border-radius: 2.5rem;
+			transition: all .4s;
+			font-family: var(--fm);
+			border: none;
+			width: 100%;
+			border: 1px solid #E6BCA4;
+			span{
+				margin-right: 0.6rem;
+				font-size: .8rem;
+				font-weight: 500;
+				line-height: 160.2%; 
+			}
+			svg{
+				fill: #67420E;
+			}
+
+			&:hover{
+				background: transparent;
+				color: white;
+				svg{
+					fill: #fff;
+				}
+			}
+			&:disabled{
+				background: #FFF;
+				opacity: 0.5;			
+				
+				&:hover{
+					color: #67420E;
+
+					svg{
+						fill: #67420E;
+					}
+				}
+			}
+
+		}
+	}
+
+	&.bag {
+		padding-bottom: 16rem;
+
+		&::after {
+			content: none;
+		}
+	}
+
+
+	&__plane {
+		height: 17rem;
+		width: 29.5rem;
+		background: url(../../assets/images/cloud_medium.png) center center no-repeat;
+		background-size: contain;
+		position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+		top: 0;
+		pointer-events: none;
+		z-index: 2;
+
+		.plane {
+			position: absolute;
+			right: 3rem;
+			width: 23rem;
+			top: -2rem;
+
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+
+		.cloud {
+			position: absolute;
+			width: 12rem;
+			right: 4rem;
+			bottom: 4rem;
+			z-index: 2;
+
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+
+	&-card {
+		display: flex;
+		position: relative;
+
+		&::after {
+			position: absolute;
+			left: -10%;
+			width: 105%;
+			height: 9rem;
+			content: '';
+			background: url(../../assets/images/cloud.png) center center no-repeat;
+			background-size: contain;
+			bottom: -4.5rem;
+		}
+	}
+
+	&-wrap {
+		border-radius: 1.5rem 0 0 1.5rem;
+		background: #704c1aff;
+		color: #fff;
+		width: 50%;
+		padding: 4rem 3rem;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	
+
+	&__title {
+		font-size: 1.6rem;
+		font-family: var(--fj);
+		font-weight: 500;
+	}
+	
+	&__text {
+		margin-top: 1.3rem;
+		line-height: 150%;
+		font-size: 0.9rem;
+		margin-bottom: 2.8rem;
+	}
+
+	&__img {
+		border-radius: 0 1.5rem 1.5rem 0;
+		overflow: hidden;
+		width: 50%;
+
+		img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+		}
+	}
+}
+
+
+
+
+
+@media (max-width: 767.98px), (max-width: 1080px) and (orientation: portrait) {
+	.consult {
+		&-card {
+			flex-direction: column;
+		}
+	
+		&__plane {
+			transform: none;
+			left: auto;
+			right: 0;
+		}
+	
+		&-wrap {
+			width: 100%;
+			border-radius: 1.5rem;
+		}
+	
+		&__img {
+			display: none;
+		}
+	}
+}
+
+
+
+
+@media (max-width: 767.98px){
+	.consult {
+		padding: 5rem 0;
+	
+		&.bag {
+			padding-bottom: 8rem;
+		}
+	
+		&__plane {
+			width: 20rem;
+			height: 13rem;
+			right: -8rem;
+			top: 3rem;
+			background-position: 3rem -2rem;
+	
+			.plane {
+				right: 3rem;
+				width: 15rem;
+				top: -2rem;
+			}
+	
+			.cloud {
+				width: 7rem;
+				right: 6rem;
+				bottom: 7rem;
+			}
+		}
+	
+		&-wrap {
+			padding: 2rem;
+		}
+	
+		&__text {
+			margin-bottom: 2rem;
+		}
+	
+		&-card::after {
+			background-size: 40rem;
+			background-position: center right;
+		}
+	}
+}
