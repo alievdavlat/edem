@@ -5,6 +5,7 @@ import planeBrwon from "../../assets/images/planebtn.svg";
 import "./customSelect.css";
 import { HiOutlineArrowLongDown, HiOutlineArrowLongUp } from "react-icons/hi2";
 import { TiPlane } from "react-icons/ti";
+import { countries, months } from "@/constants";
 
 
 const CustomSelect = () => {
@@ -22,11 +23,11 @@ const CustomSelect = () => {
               <img src={pinIcon.src} alt="ico" />
 
               <select onClick={() => setOpenDrop1(!openDrop1)}>
-                <option value="1">Турция</option>
-                <option value="1">Египет</option>
-                <option value="1">Тайланд</option>
-                <option value="1">ОАЭ</option>
-                <option value="1">Кипр</option>
+                {
+                  countries.map((item) => (
+                  <option key={item.id} value={item.rel}>{item.name_ru}</option>
+                  ))
+                }
               </select>
 
 							<div className="tourSelect-form-select-arrow">
@@ -46,18 +47,11 @@ const CustomSelect = () => {
               <img src={calendarIcon.src} alt="ico" />
 
               <select  onClick={() => setOpenDrop2(!openDrop2)}>
-                <option value="1">Январь</option>
-                <option value="1">Февраль</option>
-                <option value="1">Март</option>
-                <option value="1">Апрель</option>
-                <option value="1">Май</option>
-                <option value="1">Июнь</option>
-                <option value="1">Июль</option>
-                <option value="1">Август</option>
-                <option value="1">Сентябрь</option>
-                <option value="1">Октябрь</option>
-                <option value="1">Ноябрь</option>
-                <option value="1">Декабрь</option>
+               {
+                months.map((item) => (
+                <option key={item.id} value={item.month}>{item.name_ru}</option>
+                ))
+               }
               </select>
 							<div className="tourSelect-form-select-arrow">
 							{

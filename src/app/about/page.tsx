@@ -1,11 +1,15 @@
+'use client'
 
+import { AboutHero, Team, OwnerSection, AboutVideo } from "@/components"
 type Props = {}
 
 const page = (props: Props) => {
   return (
     <div>
-      about
-      
+      <AboutHero/>
+      <OwnerSection/>
+      <AboutVideo/>
+      <Team/>
     </div>
   )
 }

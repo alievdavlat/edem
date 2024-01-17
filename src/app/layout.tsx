@@ -46,6 +46,7 @@ const Providers = ({
         }
       </CustomModal>
     }
+
     <MobileNavigation/>
     <FixedBtn/>
      <Navbar/>
@@ -76,6 +77,7 @@ export default function RootLayout({
             children
           }
         </Providers>
+        
         </Provider>
       </body>
     </html>

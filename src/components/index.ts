@@ -10,6 +10,13 @@ import HotToursItem from './hotTours/HotToursItem'
 import Exclusive from './exclusive/Exclusive'
 import ContactForm from './contactForm/ContactForm'
 import Socials from './socials/Socials'
+import AboutHero from './hero/aboutHero/AboutHero'
+import Team from './our-team/Team'
+import ExclusiveMobile from './exclusive/ExclusiveMobile'
+import OwnerSection from './ownerSection/OwnerSection'
+import AboutVideo from './aboutVideo/AboutVideo'
+
+
 export {
   AnimatedPlane,
   Footer,
@@ -22,7 +29,13 @@ export {
   HotToursItem,
   Exclusive,
   ContactForm,
-  Socials
+  Socials,
+  AboutHero,
+  Team,
+  ExclusiveMobile,
+  OwnerSection,
+  AboutVideo
+
 
 
 }

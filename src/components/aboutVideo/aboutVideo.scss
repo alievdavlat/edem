@@ -1,0 +1,65 @@
+.video{
+  &-player{
+    width: 4.7rem;
+    height: 4.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #E4BBA3;
+    transition: all .4s;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+    svg{
+      fill: white;
+    }
+    &:hover{
+      background: #eed2c1;
+      color: #dcd7d7;
+    }
+  }
+
+  &-wrapp{
+    width: 100%;
+    position: relative;
+    border-radius: 1.5rem;
+    // top: -7rem;
+    video{
+      border-radius: 1.5rem;
+      height: 31.5rem;
+      width: 100%;
+      object-fit: cover;
+      
+      source{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+ 
+}
+}
+@media (max-width:420px){
+  .video{
+    &-player{
+    left: 40%;
+    }
+  }
+  }
+
+@media (max-width:762px){
+.video{
+ 
+  &-wrapp{
+    border-radius: 0;
+    video{
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+}
+}

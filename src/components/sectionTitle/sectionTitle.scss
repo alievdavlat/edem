@@ -12,6 +12,14 @@
       object-fit: contain;
       position: absolute;
     }
+
+    .toLeft{
+  
+        top: -2rem;
+        left: -4.5rem;
+        transform:rotate(-45deg);
+  
+    }
   }
  
 

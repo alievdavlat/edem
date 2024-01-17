@@ -93,7 +93,7 @@
 
 @media (max-width: 767.98px){
   body{
-    padding: 3.75rem 0;
+    padding: 3.75rem 0 0 0;
   }
   .homeHero {
 		padding-top: 4.5rem;
@@ -103,6 +103,7 @@
 		&::after {
 			height: 33rem;
 			border-radius: 0;
+      background-size: cover;
 		}
     &-content{
       &-logo {

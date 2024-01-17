@@ -1,0 +1,40 @@
+.abouthero{
+  background: url('../../../assets/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 44rem;
+
+  &-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    h2{
+      color: #67420E;
+      font-family: var(--fj);
+      font-weight: 600;
+      font-size: 2.5rem;
+      position: relative;
+
+      img{
+        width: 4rem;
+        height: 3rem;
+        object-fit: contain;
+        position: absolute;
+        left: -2.5rem;
+        top: -1rem;
+      }
+    }
+  }
+}
+
+
+@media (max-width:762px){
+  .abouthero{
+    height: 22rem;
+    background-image: url('../../../assets/images/bg_mobi.jpg');
+  }
+}

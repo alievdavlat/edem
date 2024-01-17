@@ -6,7 +6,9 @@ import { HotToursItem, SectionTitle } from '..'
 import { HotToursData } from '../../constants'
 import birdsicon from '../../assets/images/birds.png'
 
+
 import './hotTours.css'
+import HotToursMobile from './HotToursMobile'
 type Props = {}
 
 const HotTours = (props: Props) => {
@@ -37,6 +39,7 @@ const HotTours = (props: Props) => {
           }
         </div>
 
+          <HotToursMobile/>
       <div className='hotTours-btn'>
       
       <button>

@@ -58,6 +58,7 @@ import sunWithStar from '../assets/images/sunWithStar.svg'
 
 import avatar from '../assets/images/review-client-avatar.png'
 
+
 export const NavbarItems = [
   {
     id:1,

@@ -4,7 +4,6 @@
   border-radius: 50px 50px 0px 9px;
   background: #F8F8F8;
   padding: 3rem 5rem 0rem 5rem;
-
   &-scrollTop{
     align-items: center;
     justify-content: center;
@@ -37,8 +36,7 @@
     }
   }
   &-info{
-    padding: .9rem 0rem;
-    height: 3rem;
+    padding: .9rem 0rem .5rem 0rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -152,7 +150,15 @@
 @media (max-width:1000px){
   .footer{
     padding: 3rem 0rem 0rem 0rem;
-
+    &-info{
+      align-items: center;
+      justify-content: end;
+      height: fit-content;
+      padding: .75rem;
+      p{
+        display: none;
+      }
+    }
     &-scrollTop{
       display: flex;
     }
@@ -190,8 +196,6 @@
           justify-content: center;
         }
 
-        ul{
-        }
       }
     }
     }
