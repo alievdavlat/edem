@@ -1,0 +1,358 @@
+.singleTourLeft{
+  margin-right: 9.85rem;
+  width: 55%;
+  margin-bottom: 11.65rem;
+
+
+  &-infoWrap{
+    h3 {
+      color: #000;
+      font-family: var(--fj);
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 3.15rem !important;
+    }
+
+    button{
+      padding: .9rem 2rem .75rem 2rem;
+      border: 1px solid #67420E;
+      background: #67420E;
+      color: white;
+      font-size: 1rem;
+      font-family: var(--fj);
+      font-weight: 300;
+      border-radius: 2.05rem;
+      margin-top: 3rem;
+      transition: all .4s;
+      &:hover{
+        color: #67420E;
+        background: transparent;
+      }
+      strong{
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &-item{
+      display: flex;
+      margin-bottom: 1.75rem;
+      margin-right: 4.75rem;
+      &:last-of-type{
+        margin-bottom: 1rem;
+        margin-right: 0rem;
+      }
+    &-icon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: #F3EFED;
+      border-radius: 50%;
+      margin-right: .5rem;
+    }
+    &-text{
+      p{
+        color: #ABABAB;
+        font-size: .8rem;
+        font-weight: 400;
+        font-family: var(--fm);
+      }
+      strong{
+        color: #000;
+        font-size: .8rem;
+        font-weight: 600;
+      }
+    }
+
+    }
+  }
+
+  &-about{
+    margin-top: 6.25rem;
+
+    p{
+      color: #000;
+      font-size: .8rem;
+      font-family: var(--fm);
+      font-weight: 500;
+      line-height: 180%; 
+    }
+  }
+
+  &-hotels{
+    margin-top: 4.6rem;
+    &-wrapp{
+      margin-top: 2rem;
+    }
+    &-star{
+      display: flex;
+      align-items: center;
+      div{
+        width: 1.7rem;
+        height: 1.7rem;
+        background-color: #F3EFED;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.45rem;
+        &:last-of-type{
+        margin-right: 0;
+        }
+
+        svg{
+          width: 1rem;
+          height: 1rem;
+          fill: #67420E;
+        }
+
+      }
+
+    }
+
+    &-list{
+        margin-top: 1.25rem;
+        li{
+          position: relative;
+          display: flex;
+          align-items: center;
+          margin-bottom: .5rem;
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+          span{
+            margin-left: .6rem;
+            color: #000;
+            font-size: .8rem;
+            font-weight: 600;
+            line-height: 180%; 
+          }
+          &::before{
+            content: '';
+            position: absolute;
+            width: .2rem;
+            height: .2rem;
+            background: #000;
+            border-radius: 50%;
+          }
+      }
+    }
+
+  
+
+  }
+
+  &-peculiarities{
+    margin-top: 5.85rem;
+
+    ul{
+      li{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 1.5rem;
+
+      
+        span{
+          color: #000;
+          font-family: var(--fm);
+          font-weight: 400;
+          line-height: 180%; 
+          width: 95%;
+        }
+        div{
+          width: 2.5rem;
+          height:  2.5rem;
+          background: #F3EFED;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: .75rem;
+          transition: all .4s;
+           
+          img{
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: #67420E;
+          }
+        }
+      }
+    }
+  }
+
+  &-price{
+    margin-top: 5.85rem;
+    position: relative;
+    &-leaf{
+      position: absolute;
+      width: 18.1rem;
+      height: 36.2rem;
+      left: -19rem;
+      bottom: -20rem;
+      img{
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+    &-notincludes{
+     &-badge{
+      filter: drop-shadow(0px 2px 1.7rem #DD665D);
+      background: #D52B1E;
+     } 
+    }
+
+    &-includes{
+      margin-bottom: 3.45rem;
+      &-badge{
+        filter: drop-shadow(0px 2px 1.7rem #7F5);
+        background:#76B267;
+      }
+    }
+    &-includes,
+    &-notincludes{
+      ul{
+        position: relative;
+        background: #67420E;
+        border-radius: 1.5rem;
+        padding: 1.25rem;
+        li{
+          display: flex;
+          align-items: center;
+          margin-bottom: 0.65rem;
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+          &::before{
+            content: '';
+            width: .2rem;
+            height: .2rem;
+            background:white;
+            margin-right: .5rem;
+            border-radius: 50%;
+
+          }
+        span{
+          color: #FFF;
+          font-size: .8rem;
+          font-weight: 400;
+          line-height: 180%; 
+          font-family: var(--fm);
+        }
+        }
+      }
+
+      &-badge{
+        position: absolute;
+        width: 3.25rem;
+        height: 3.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border-radius: 1rem;
+        right: -1rem;
+        bottom: -1rem;
+        svg{
+          fill: white;
+        }
+
+      }
+    }
+  }
+
+  &-programm{
+    margin-top: 5.9rem;
+
+    &-text{
+      color: #000;
+      font-size: .8rem;
+      font-family: var(--fm);
+      font-weight: 500;
+      line-height: 180%;
+      margin-bottom: 1.5rem;
+      strong{
+        font-weight: 600;
+      }
+    }
+
+    button{
+      padding: 1rem 8.1rem;
+      border: 1px solid #67420E;
+      transition: all .4s;
+      font-family: var(--fm);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: white;
+      background: #67420E;
+      border-radius: 2.05rem;
+      margin-top: 5.05rem;
+
+      &:hover{
+        color: #67420E;
+        background: transparent;
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 1024px){
+  .singleTourLeft{
+    width: 100%;
+
+    &-infoWrap{
+      padding: 1rem;
+    }
+
+    &-info{
+      width: 100%;
+      &-item{
+
+        &:last-of-type{
+          margin-right: 0rem;
+        }
+  
+      }
+    }
+
+    &-price{
+      &-leaf{
+        display: none;
+      }
+
+    }
+    &-programm{
+      &-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        button{
+          width: 80%;
+        }
+      }
+    }
+
+    &-programm,
+    &-price,
+    &-about,
+    &-hotels,
+    &-peculiarities{
+      padding: 1rem;
+
+    }
+
+
+  }
+}

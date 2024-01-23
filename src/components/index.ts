@@ -15,7 +15,8 @@ import Team from './our-team/Team'
 import ExclusiveMobile from './exclusive/ExclusiveMobile'
 import OwnerSection from './ownerSection/OwnerSection'
 import AboutVideo from './aboutVideo/AboutVideo'
-
+import RestTours from './restTours/RestTours'
+import FeadbackModal from './customModal/FeadbackModal'
 
 export {
   AnimatedPlane,
@@ -34,7 +35,9 @@ export {
   Team,
   ExclusiveMobile,
   OwnerSection,
-  AboutVideo
+  AboutVideo,
+  RestTours,
+  FeadbackModal
 
 
 

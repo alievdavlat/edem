@@ -5,6 +5,7 @@
   background-size: cover;
   height: 44rem;
 
+
   &-title{
     display: flex;
     align-items: center;
@@ -34,7 +35,7 @@
 
 @media (max-width:762px){
   .abouthero{
-    height: 22rem;
+    height: 10rem;
     background-image: url('../../../assets/images/bg_mobi.jpg');
   }
 }

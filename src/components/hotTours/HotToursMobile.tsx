@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/free-mode";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay , Navigation, FreeMode} from "swiper/modules";
 import { HotToursData } from "@/constants";
 import { HotToursItem } from "..";
 
@@ -16,6 +16,10 @@ const HotToursMobile = () => {
       spaceBetween={100}
       pagination={{
         clickable: true,
+      }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
       }}
       breakpoints={{
         375: {
@@ -39,7 +43,11 @@ const HotToursMobile = () => {
           spaceBetween: 40,
         },
       }}
-      modules={[Pagination, Autoplay]}
+      
+    
+      navigation={true}
+      modules={[Autoplay, Pagination,  FreeMode, Navigation]}
+
       className="hotTours-mobileContent">
       {HotToursData.map((item) => (
         <SwiperSlide key={item.id}>

@@ -1,1 +1,148 @@
-.tourSelect{margin-top:2rem;position:absolute;bottom:8rem;z-index:999;background:#fff;display:flex;align-items:center;justify-content:center;width:100%;border-radius:2rem}.tourSelect-form{display:flex;align-items:center;width:100%}.tourSelect-form .btn{border-radius:2.1rem;background:#67420e;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:.95rem 3.9rem;margin-top:1.1rem;border:none;outline:none;transition:all .4s;border:1px solid #67420e}.tourSelect-form .btn svg{margin-left:.5rem;width:1rem;height:1rem}.tourSelect-form .btn:hover{background:#fff;color:#67420e;border:1px solid #67420e}.tourSelect-form .btn:hover svg{fill:#67420e}.tourSelect-form-wrap p{color:#000;font-size:.8rem;font-weight:500;font-family:var(--fm);margin-left:.5rem !important}.tourSelect-form-select{margin-top:.5rem;display:flex;width:19.3rem;border:1px solid #67420e;border-radius:1.45rem;position:relative;margin-right:1.5rem;align-items:center;position:relative;padding:0rem .5rem 0rem 1rem}.tourSelect-form-select img{width:1.1rem;margin-right:.5rem}.tourSelect-form-select-arrow{border:none;outline:none;display:flex;position:absolute;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:#67420e;color:#fff;cursor:pointer;transition:all .4s;right:.5rem}.tourSelect-form-select-arrow:hover,.tourSelect-form-select-arrow:active{background:#fff;border:1px solid #67420e;color:#67420e}.tourSelect-form-select-arrow svg{fill:#fff}.tourSelect-form-select select{width:100%;height:100%;border:none;outline:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;z-index:1;background:rgba(0,0,0,0);padding:.65rem 0rem .75rem 0rem}.tourSelect-form-select select:active,.tourSelect-form-select select:focus{border:none;outline:none}.tourSelect-form-select select option{font-size:1.1rem;font-weight:700;font-family:var(--fj);color:#67420e;border:1px solid #67420e;border-radius:3rem}.tourSelect-form-select select option:checked,.tourSelect-form-select select option:active,.tourSelect-form-select select option:focus,.tourSelect-form-select select option:hover{background-color:#67420e !important;color:#fff !important}@media(max-width: 1024px){.tourSelect{bottom:-4rem;height:17rem}.tourSelect-form{width:100%;margin-left:0;flex-direction:column;padding:1rem}.tourSelect-form .btn{width:100%;align-items:center;justify-content:center}.tourSelect-form-wrap{width:100%}.tourSelect-form-select{width:100%}}@media(max-width: 840px){.tourSelect-form{margin-top:10rem}}
+.tourSelect {
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 8rem;
+  z-index: 999;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 2rem;
+}
+.tourSelect-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.tourSelect-form .btn {
+  border-radius: 2.1rem;
+  background: #67420E;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.95rem 3.9rem;
+  margin-top: 1.1rem;
+  border: none;
+  outline: none;
+  transition: all 0.4s;
+  border: 1px solid #67420E;
+}
+.tourSelect-form .btn svg {
+  margin-left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+.tourSelect-form .btn:hover {
+  background: white;
+  color: #67420E;
+  border: 1px solid #67420E;
+}
+.tourSelect-form .btn:hover svg {
+  fill: #67420E;
+}
+.tourSelect-form-wrap p {
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: var(--fm);
+  margin-left: 0.5rem !important;
+}
+.tourSelect-form-select {
+  margin-top: 0.5rem;
+  display: flex;
+  width: 19.3rem;
+  border: 1px solid #67420E;
+  border-radius: 1.45rem;
+  position: relative;
+  margin-right: 1.5rem;
+  align-items: center;
+  position: relative;
+  padding: 0rem 0.5rem 0rem 1rem;
+}
+.tourSelect-form-select img {
+  width: 1.1rem;
+  margin-right: 0.5rem;
+}
+.tourSelect-form-select-arrow {
+  border: none;
+  outline: none;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #67420E;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s;
+  right: 0.5rem;
+}
+.tourSelect-form-select-arrow:hover, .tourSelect-form-select-arrow:active {
+  background: white;
+  border: 1px solid #67420E;
+  color: #67420E;
+}
+.tourSelect-form-select-arrow svg {
+  fill: white;
+}
+.tourSelect-form-select select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  z-index: 1;
+  background: transparent;
+  padding: 0.65rem 0rem 0.75rem 0rem;
+}
+.tourSelect-form-select select:active, .tourSelect-form-select select:focus {
+  border: none;
+  outline: none;
+}
+.tourSelect-form-select select option {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: var(--fj);
+  color: #67420E;
+  border: 1px solid #67420E;
+  border-radius: 3rem;
+}
+.tourSelect-form-select select option:checked, .tourSelect-form-select select option:active, .tourSelect-form-select select option:focus, .tourSelect-form-select select option:hover {
+  background-color: #67420E !important;
+  color: white !important;
+}
+
+@media (max-width: 1024px) {
+  .tourSelect {
+    bottom: -4rem;
+    height: 17rem;
+  }
+  .tourSelect-form {
+    width: 100%;
+    margin-left: 0;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .tourSelect-form .btn {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .tourSelect-form-wrap {
+    width: 100%;
+  }
+  .tourSelect-form-select {
+    width: 100%;
+  }
+}
+@media (max-width: 840px) {
+  .tourSelect-form {
+    margin-top: 10rem;
+  }
+}/*# sourceMappingURL=customSelect.css.map */

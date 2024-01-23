@@ -1,1 +1,303 @@
-.hotTours{position:relative;margin-top:3rem;overflow:hidden}.hotTours-btn{display:flex;align-items:center;justify-content:center;width:100%;margin-top:3.5rem}.hotTours-btn button{border:1px solid #67420e;outline:none;background:#67420e;color:#fff;padding:1rem 2.65rem;border-radius:2rem;cursor:pointer;font-weight:600;font-family:var(--fm);transition:all .4s;font-size:.8rem}.hotTours-btn button:hover{background:#fff;color:#67420e}.hotTours-plane{position:absolute;z-index:1111;right:0;top:-8rem;overflow:hidden;transition:all .4s;animation-name:bottomFly;animation-duration:3s;animation-timing-function:linear;animation-iteration-count:1}.hotTours-plane::after{position:absolute;width:15rem;right:0;top:12rem;height:19.5rem;background:url(../../assets/images/plane-top-cloud.png) center center no-repeat;background-size:contain;content:""}.hotTours-plane img{-o-object-fit:cover;object-fit:cover}.hotTours-plane img:last-of-type{position:absolute;z-index:1}.hotTours-title{width:80%;padding-right:3rem}.hotTours-titleMobile{width:100%;display:flex;align-items:center;justify-content:center;display:none;margin-bottom:1.5rem;margin-top:1.5rem}.hotTours-titleMobile h3{color:#67420e;font-family:var(--fj);font-size:2.5rem;font-weight:600;position:relative}.hotTours-titleMobile img{-o-object-fit:contain;object-fit:contain;position:absolute;left:-5rem;top:-1rem;width:5rem;height:3rem;transform:rotate(-45deg)}.hotTours .swiper{width:100%;height:45rem}.hotTours .swiper .swiper-slide{margin-right:1.5rem;width:14.1rem;height:15.15rem}.hotTours-mobileContent{display:none}.hotTours-content{display:flex;flex-wrap:wrap;margin-top:1.75rem}.hotTours-content-item{position:relative;margin-right:1.5rem;margin-bottom:1.5rem;border-radius:1.5rem;background:#fff;box-shadow:0rem 0rem 1rem 0rem rgba(0,0,0,.1)}.hotTours-content-item:last-of-type{margin-right:0}.hotTours-content-item-image img{width:100%;height:100%;border-radius:1.5rem;-o-object-fit:cover;object-fit:cover}.hotTours-content-item-image-country{position:absolute;z-index:3333;background:#67420e;padding:.15rem 1.05rem;color:#fff;font-family:var(--fj);font-size:.8rem;left:.75rem;top:.75rem;border-radius:.9rem;transition:all .4s}.hotTours-content-item-image-country:hover{background:#fff;color:#67420e}.hotTours-content-item-info{padding:1rem}.hotTours-content-item-info h4{color:#000;font-family:var(--fj);font-size:1.2rem;font-weight:500}.hotTours-content-item-info-list{margin-top:1.35rem}.hotTours-content-item-info-list-item{display:flex;align-items:center;margin-bottom:1rem}.hotTours-content-item-info-list-item:last-of-type{margin-bottom:0}.hotTours-content-item-info-list-item_icon{width:2.25rem;height:2.25rem;border-radius:50%;background:#f3efed;display:flex;align-items:center;justify-content:center}.hotTours-content-item-info-list-item_icon svg{-o-object-fit:contain;object-fit:contain}.hotTours-content-item-info-list-item div:last-of-type{margin-left:.5rem}.hotTours-content-item-info-list-item p{color:#ababab;font-family:var(--fm);font-size:.8rem;font-weight:400}.hotTours-content-item-info-list-item strong{font-family:var(--fm);color:#000;font-size:.8rem;font-weight:600}.hotTours-content-item-btns{display:flex;align-items:center;justify-content:center;flex-direction:column;width:100%;margin-top:1.8rem}.hotTours-content-item-btns button{border:none;outline:none;width:100%;border-radius:2.05rem;margin-bottom:1rem;padding:.5rem 3.5rem}.hotTours-content-item-btns button:last-of-type{margin-bottom:0}.hotTours-content-item-btns-withIcon{display:flex;align-items:center;position:relative;padding:1rem 0rem 1rem 0rem !important;display:flex;align-items:center;justify-content:center}.hotTours-content-item-btns-withIcon div{position:absolute;right:.5rem;width:2rem;height:2rem;border-radius:50%;background:#67420e;color:#fff;transition:all .4s;display:flex;align-items:center;justify-content:center}.hotTours-content-item-btns-withIcon div svg{fill:#fff}.hotTours-content-item-btns-withIcon div:hover{background:#fff;color:#67420e}.hotTours-content-item-btns-withIcon div:hover svg{fill:#67420e;transform:translateY(45deg)}@media(max-width: 1024px){.hotTours .swiper{height:42rem}.hotTours .swiper .swiper-pagination-lock{display:block !important}.hotTours-btn{margin:1.75rem 0rem 0rem 0rem}.hotTours-plane{display:none}.hotTours-title{display:none}.hotTours-titleMobile{display:flex}.hotTours-mobileContent{display:block;padding:0rem 1rem}.hotTours-mobileContent .swiper-pagination .swiper-pagination-bullet{width:.9rem;height:.9rem;border:2px solid #67420e;background:rgba(0,0,0,0)}.hotTours-mobileContent .swiper-pagination .swiper-pagination-bullet-active{position:relative}.hotTours-mobileContent .swiper-pagination .swiper-pagination-bullet-active::after{position:absolute;border-radius:50%;content:"";top:16%;left:20%;bottom:0;width:.45rem;height:.45rem;background:#67420e !important}.hotTours-content{display:flex;align-items:center;justify-content:center;padding:0rem 1rem;display:none}}@keyframes bottomFly{from{opacity:0;transform:translate3d(100%, 0, 0)}to{opacity:1;transform:translate3d(0, 0, 0)}}
+.hotTours {
+  position: relative;
+  margin-top: 3rem;
+  overflow: hidden;
+}
+.hotTours-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3.5rem;
+}
+.hotTours-btn button {
+  border: 1px solid #67420E;
+  outline: none;
+  background: #67420E;
+  color: white;
+  padding: 1rem 2.65rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--fm);
+  transition: all 0.4s;
+  font-size: 0.8rem;
+}
+.hotTours-btn button:hover {
+  background: white;
+  color: #67420E;
+}
+.hotTours-plane {
+  position: absolute;
+  z-index: 1111;
+  right: 0;
+  top: -8rem;
+  overflow: hidden;
+  transition: all 0.4s;
+  animation-name: bottomFly;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.hotTours-plane::after {
+  position: absolute;
+  width: 15rem;
+  right: 0;
+  top: 12rem;
+  height: 19.5rem;
+  background: url(../../assets/images/plane-top-cloud.png) center center no-repeat;
+  background-size: contain;
+  content: "";
+}
+.hotTours-plane img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hotTours-plane img:last-of-type {
+  position: absolute;
+  z-index: 1;
+}
+.hotTours-title {
+  width: 80%;
+  padding-right: 3rem;
+}
+.hotTours-titleMobile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+.hotTours-titleMobile h3 {
+  color: #67420E;
+  font-family: var(--fj);
+  font-size: 2.5rem;
+  font-weight: 600;
+  position: relative;
+}
+.hotTours-titleMobile img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  left: -5rem;
+  top: -1rem;
+  width: 5rem;
+  height: 3rem;
+  transform: rotate(-45deg);
+}
+.hotTours .swiper {
+  width: 100%;
+  height: 45rem;
+}
+.hotTours .swiper .swiper-slide {
+  margin-right: 1.5rem;
+  width: 14.1rem;
+  height: 15.15rem;
+}
+.hotTours-mobileContent {
+  display: none;
+}
+.hotTours-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+.hotTours-content-item {
+  position: relative;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1.5rem;
+  background: #FFF;
+  box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.1);
+}
+.hotTours-content-item:last-of-type {
+  margin-right: 0;
+}
+.hotTours-content-item-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hotTours-content-item-image-country {
+  position: absolute;
+  z-index: 3333;
+  background: #67420E;
+  padding: 0.15rem 1.05rem;
+  color: #FFF;
+  font-family: var(--fj);
+  font-size: 0.8rem;
+  left: 0.75rem;
+  top: 0.75rem;
+  border-radius: 0.9rem;
+  transition: all 0.4s;
+}
+.hotTours-content-item-image-country:hover {
+  background: #FFF;
+  color: #67420E;
+}
+.hotTours-content-item-info {
+  padding: 1rem;
+}
+.hotTours-content-item-info h4 {
+  color: #000;
+  font-family: var(--fj);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.hotTours-content-item-info-list {
+  margin-top: 1.35rem;
+}
+.hotTours-content-item-info-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.hotTours-content-item-info-list-item:last-of-type {
+  margin-bottom: 0;
+}
+.hotTours-content-item-info-list-item_icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: #F3EFED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hotTours-content-item-info-list-item_icon svg {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.hotTours-content-item-info-list-item div:last-of-type {
+  margin-left: 0.5rem;
+}
+.hotTours-content-item-info-list-item p {
+  color: #ABABAB;
+  font-family: var(--fm);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.hotTours-content-item-info-list-item strong {
+  font-family: var(--fm);
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.hotTours-content-item-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1.8rem;
+}
+.hotTours-content-item-btns button {
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 2.05rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 3.5rem;
+}
+.hotTours-content-item-btns button:last-of-type {
+  margin-bottom: 0;
+}
+.hotTours-content-item-btns-withIcon {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 1rem 0rem 1rem 0rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hotTours-content-item-btns-withIcon div {
+  position: absolute;
+  right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #67420E;
+  color: #FFF;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hotTours-content-item-btns-withIcon div svg {
+  fill: #FFF;
+}
+.hotTours-content-item-btns-withIcon div:hover {
+  background: #FFF;
+  color: #67420E;
+}
+.hotTours-content-item-btns-withIcon div:hover svg {
+  fill: #67420E;
+  transform: translateY(45deg);
+}
+
+@media (max-width: 1024px) {
+  .hotTours .swiper {
+    height: 42rem;
+  }
+  .hotTours .swiper .swiper-pagination-lock {
+    display: block !important;
+  }
+  .hotTours-btn {
+    margin: 1.75rem 0rem 0rem 0rem;
+  }
+  .hotTours-plane {
+    display: none;
+  }
+  .hotTours-title {
+    display: none;
+  }
+  .hotTours-titleMobile {
+    display: flex;
+  }
+  .hotTours-mobileContent {
+    display: block;
+    padding: 0rem 1rem;
+  }
+  .hotTours-mobileContent .swiper-pagination .swiper-pagination-bullet {
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 2px solid #67420E;
+    background: transparent;
+  }
+  .hotTours-mobileContent .swiper-pagination .swiper-pagination-bullet-active {
+    position: relative;
+  }
+  .hotTours-mobileContent .swiper-pagination .swiper-pagination-bullet-active::after {
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    top: 16%;
+    left: 20%;
+    bottom: 0;
+    width: 0.45rem;
+    height: 0.45rem;
+    background: #67420E !important;
+  }
+  .hotTours-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 1rem;
+    display: none;
+  }
+}
+@keyframes bottomFly {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}/*# sourceMappingURL=hotTours.css.map */

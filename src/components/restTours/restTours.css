@@ -1,0 +1,27 @@
+.restTours-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .restTours {
+    padding-top: 5rem;
+    padding-left: 0rem;
+  }
+  .restTours-content {
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .restTours {
+    margin-top: 5rem;
+    padding-left: 0rem;
+  }
+  .restTours-content {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0rem 0rem 0rem 1.5rem;
+  }
+}/*# sourceMappingURL=restTours.css.map */

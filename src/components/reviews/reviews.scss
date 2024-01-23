@@ -1,0 +1,250 @@
+.reviews {
+
+	.swiper{
+		height: 30rem;
+	}
+  &-carousel {
+		margin-bottom: 7rem;
+
+		
+		.swiper-pagination{
+      .swiper-pagination-bullet{
+        width: 0.9rem;
+        height: 0.9rem;
+        border: 2px solid #67420E;
+        background: transparent;
+      }
+      .swiper-pagination-bullet-active{
+        position: relative;
+        &::after{
+          position: absolute;
+          border-radius: 50%;
+          content: '';
+          top: 16%;
+          left: 20%;
+          bottom: 0;
+          width: 0.45rem;
+          height: 0.45rem;
+          background: #67420E !important;
+        }
+      }
+    }
+	}
+	&-item {
+    &__main {
+			background: #67420E;
+			color: #fff;
+			padding: 1.5rem 0.5rem .5rem 1.5rem;
+			border-radius: 1.5rem;
+			border-bottom-left-radius: 0;
+			position: relative;
+			margin-bottom: 1.5rem;
+
+			&::after {
+				width: calc(100% - 1.5rem);
+				height: 3.5rem;
+				content: '';
+				position: absolute;
+				pointer-events: none;
+				left: 0;
+				bottom: 0;
+				background: linear-gradient(0deg, #67420E 17.5%, rgba(103, 66, 14, 0.00) 100%);
+			}
+
+			&::before {
+				position: absolute;
+				width: 0px;
+				height: 0px;
+				border-style: solid;
+				border-width: 1rem 1rem 0 0;
+				border-color: #67420E transparent transparent transparent;
+				content: '';
+				bottom: -1rem;
+				left: 0;
+			}
+		}
+
+    &__quote {
+			width: 1.8rem;
+			margin-bottom: 0.5rem;
+		}
+    &__text {
+			padding-right: 1rem;
+			line-height: 180%;
+			font-size: 0.7rem;
+			font-weight: 400;
+			padding-bottom: 2rem;
+			max-height: 14rem;
+			overflow: auto;
+
+			&::-webkit-scrollbar {
+				width: .25rem;
+				height: 0.5rem;
+				border-radius: .25rem;
+			}
+			
+			&::-webkit-scrollbar-track {
+				background: #8E6B38;
+				border-radius: .25rem;
+			}
+			
+			&::-webkit-scrollbar-thumb {
+				background: #E6BCA4;
+				border-radius: .25rem;
+			}
+		}
+
+    &__bot {
+			display: flex;
+			align-items: center;
+			gap: 1.1rem;
+		}
+
+    &__photo {
+			width: 5rem;
+			flex-shrink: 0;
+			height: 5rem;
+			border-radius: 50%;
+			border: .1rem solid #E4BBA3;
+
+			img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+			}
+		}
+
+    &__name {
+			font-size: 1.1rem;
+			font-family: var(--fj);
+			font-weight: 600;
+		}
+
+    &__info {
+			font-style: italic;
+			line-height: 180%;
+		}
+  }
+  &-form {
+    display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1.5rem;
+		margin-bottom: 5rem;
+
+    &__item{
+      width: calc(33.3333% - 1rem);
+			margin-bottom: 0.5rem;
+			display: flex;
+			flex-direction: column-reverse;
+      p {
+        color: #B0B0B0;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        transition: all .4s;
+      }
+  
+      input, textarea {
+        width: 100%;
+        height: 3.5rem;
+        border: 1px solid #D7D7D7;
+        color: #000;
+        background: transparent;
+        border-radius: 3rem;
+        padding: 0 1.5rem;
+        font-size: 0.9rem;
+        transition: all .4s;
+    
+        &::placeholder {
+          color: #B0B0B0;
+        }
+  
+        &:focus {
+          border-color: #66410dff;
+  
+          & + p {
+            font-weight: 500;
+            color: #000;
+          }
+        }
+      }
+
+      textarea {
+				resize: none;
+				padding: 1.2rem 1.5rem;
+				border-radius: 1.5rem;
+				height: 7.5rem;
+				outline: none;
+			}
+    }
+
+    &__message {
+			width: 100%;
+			margin-bottom: 1rem;
+		}
+
+    .btn {
+			width: calc(33.3333% - 1rem);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background: #67420E;
+      height: 3rem;
+      border-radius: 3rem;
+      color: #fff;
+      gap: .5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid #67420E;
+      transition: all .4s;
+
+	img {
+		width: .85rem;
+	}
+
+	&:hover {
+		background:transparent;
+    color: #67420E;
+	}
+		}
+  }
+}
+
+
+@media (max-width: 767px) {
+	.reviews {
+		
+		.section-title{
+			padding: 0rem 1rem;
+		}
+		.swiper-slide{
+			width: 10%;
+		}
+		&-carousel {
+			margin-bottom: 3rem;
+			padding: 1rem;
+		}
+
+		&-form {
+			margin-bottom: 0;
+			padding: 1rem;
+			&__item {
+				width: 100%;
+
+				textarea {
+					height: 15rem;
+				}
+			}
+
+			&__message {
+				margin-bottom: 0;
+			}
+
+			.btn {
+				width: 100%;
+			}
+		}
+
+	}
+}

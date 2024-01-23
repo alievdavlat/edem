@@ -88,7 +88,7 @@ export const NavbarItems = [
     id:5,
     text_ru:'Контакты',
     text_uz:'Контакты',
-    path:'/contact'
+    path:'footer'
   }
 ]
 
@@ -1190,27 +1190,47 @@ export const ourTeam = {
 export const singleTourHeadSlide = [
   {
     id:1,
-    image:singleTourSlide1
+    image:singleTourSlide1,
+    coutry_uz:'',
+    coutry_ru:'Мальдивы',
   },
   {
     id:2,
-    image:singleTourSlide2
+    image:singleTourSlide2,
+    coutry_uz:'',
+    coutry_ru:'Швейцария',
+
+
   },
   {
     id:3,
-    image:singleTourSlide3
+    image:singleTourSlide3,
+    coutry_uz:'',
+    coutry_ru:'Турция',
+
+
   },
   {
     id:4,
-    image:singleTourSlide1
+    image:singleTourSlide1,
+    coutry_uz:'',
+    coutry_ru:'Сейшелы',
+
+
   },
   {
     id:5,
-    image:singleTourSlide2
+    image:singleTourSlide3,
+    coutry_uz:'',
+    coutry_ru:'Малайзия',
+
   },
   {
     id:6,
-    image:singleTourSlide3
+    image:singleTourSlide1,
+    coutry_uz:"",
+    coutry_ru:'Мальдивы',
+
   },
  
   

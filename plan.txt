@@ -1,8 +1,21 @@
-section title modify
 
-select modify
+mobile menu 
 
-hero modify 
+
+
 
 preloader modify
 
+till 
+
+kode review
+
+section-title va bag classlarni optimize 
+
+review form placeholder
+
+responseve reviw
+
+pagination tours page 
+
+show more home da

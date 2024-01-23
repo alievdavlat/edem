@@ -1,12 +1,19 @@
-'use client'
-import React from 'react'
+"use client";
+import { ContactForm } from "@/components";
+import FaqSection from "@/components/faqSection/FaqSection";
+import FaqHero from "@/components/hero/faqHero/FaqHero";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div>faq</div>
-  )
-}
+    <div className="faqs">
+      <FaqHero />
+      <FaqSection/>
+      <ContactForm/>
+    </div>
+  );
+};
 
-export default page
+export default page;

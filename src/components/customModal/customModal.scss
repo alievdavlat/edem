@@ -30,3 +30,128 @@ justify-content: center;
   }
 
 }
+
+
+.feedback {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 7;
+	background: rgba($color: #000, $alpha: .6);
+	
+
+	&-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2.1rem;
+		border-radius: 1rem;
+		background: #fff;
+		width: 22rem;
+		box-shadow: 0px .5rem 1rem 0px rgba(0, 0, 0, 0.05);
+	}
+
+	&__close {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+		top: -3.5rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 50%;
+		background: #fff;
+		cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+		user-select: none;
+
+		img {
+			width: .5rem;
+		}
+	}
+
+	&__title {
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+		font-size: 1.8rem;
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 0.7rem;
+		font-weight: 500;
+		line-height: 150%;
+		text-align: center;
+	}
+	
+
+	&-form {
+		margin: 2rem auto 0.8rem;
+		max-width: 18rem;
+		input {
+			color: #000;
+			width: 100%;
+			height: 3rem;
+			border: .1rem solid #E6BCA4;
+			background: transparent;
+			border-radius: 3rem;
+			padding: 0 1.5rem;
+			margin-bottom: 1rem;
+			outline: none;
+			&::placeholder {
+				color: rgba($color: #000, $alpha: .6);
+			}
+		}
+
+	button{
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		background: #66410dff;
+		height: 3rem;
+		border-radius: 3rem;
+		color: #fff;
+		gap: .5rem;
+		font-size: 0.9rem;
+		font-weight: 600;
+		transition: all .4s;
+		border: 1px solid #66410dff;
+		padding: .9rem 5.9rem;
+	&:hover {
+		color: #66410dff;
+		background:transparent;
+	}
+
+	
+		}
+	}
+
+	&__agree {
+		font-size: 0.7rem;
+		text-align: center;
+		max-width: 13rem;
+		margin: 0 auto;
+	}
+
+	&-done {
+		// display: none;
+
+		.feedback__text {
+			margin-bottom: 1rem;
+			padding: 0 1rem;
+		}
+	}
+
+	&__img {
+		margin: 2rem 0;
+		text-align: center;
+
+		img {
+			display: inline-block;
+			width: 10rem;
+		}
+	}
+}

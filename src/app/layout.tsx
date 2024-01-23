@@ -11,6 +11,7 @@ import { Provider, useSelector } from 'react-redux'
 import { store } from '@/redux/store'
 import CustomModal from '@/components/customModal/CustomModal'
 import LanguageContent from '@/components/customModal/languageContent/LanguageContent'
+import { FeadbackModal } from '@/components'
 
 
 const Providers = ({
@@ -44,8 +45,14 @@ const Providers = ({
         {
           child == 1 && <LanguageContent/>
         }
+        
+        {
+        child == 2 && <FeadbackModal/>
+       }
       </CustomModal>
     }
+
+     
 
     <MobileNavigation/>
     <FixedBtn/>

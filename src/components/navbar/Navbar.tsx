@@ -43,9 +43,13 @@ const Navbar = () => {
               {
                 NavbarItems.map(item => (
                   <li key={item.id}>
-                  <Link href={`${item.path}`}>
+                  {
+                    item.path == 'footer'
+                    ? <a href={`#${item.path}`} >{item.text_ru}</a>
+                    : <Link href={`${item.path}`}>
                     {item.text_ru}
                   </Link>
+                  }
                   </li>
                 ))
               }

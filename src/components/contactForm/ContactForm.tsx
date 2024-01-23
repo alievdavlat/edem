@@ -10,7 +10,7 @@ type Props = {}
 
 const ContactForm = (props: Props) => {
   return (
-    <section className="consult">
+    <section className="consult bag">
 		<div className="container">
 			<div className="consult__plane">
 				<img src={smollCLoud.src} alt="img" className="cloud"/>

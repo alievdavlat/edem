@@ -1,0 +1,110 @@
+.accordion{
+  width: fit-content;
+  margin: 0rem 0rem .75rem 0rem;
+
+  &-head{
+    width: 50.5rem;
+    background: #F8F8F8;
+    border-radius: 2.5rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    &-arrow{
+      width: 2.1rem;
+      height: 2.1rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      color: black;
+      transition: all .4s;
+      cursor: pointer;
+      background: #FFF;
+
+      svg{
+        fill: black;
+      }
+      &:hover{
+        background: #67420E;
+        color: white;
+
+        svg{
+          fill: white;
+        }
+      }
+
+
+    }
+
+    .arrowActive{
+      background: #67420E;
+      color: white;
+      border: 1px solid #67420E;
+      transition: all .4s;
+      svg{
+        fill: white;
+      }
+
+      &:hover{
+        background: transparent;
+        color: #181818;
+        svg{
+          fill: #181818;
+        }
+      }
+    }
+  }
+
+  &-bottom{
+    width: 50.5rem;
+    margin: .75rem 0rem;
+    padding: 1.5rem;
+    background: #F8F8F8;
+    border-radius: 1rem;
+    transition: all .4s;
+    display: none;
+    p{
+    color: #181818;
+    text-align: justify;
+    font-family: var(--fm);
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 180%; 
+    }
+  }
+}
+
+.activeAccordionBody{
+  width: 50.5rem;
+  margin: .75rem 0rem;
+  padding: 1.5rem;
+  background: #F8F8F8;
+  border-radius: 1rem;
+  transition: all .4s ease-in;
+  display: block !important;
+
+  p{
+  color: #181818;
+  text-align: justify;
+  font-family: var(--fm);
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 180%; 
+  }
+}
+
+
+@media (max-width:1024px){
+  .activeAccordionBody{
+    width: auto;
+  }
+  
+ .accordion{
+  &-bottom,
+  &-head{
+    width: auto;
+  }
+ } 
+}

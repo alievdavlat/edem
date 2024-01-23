@@ -1,0 +1,32 @@
+.faqs-content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 6.85rem ;
+}
+
+
+@media (max-width: 767px) {
+    .faqs-content{
+      margin-top: 11rem;
+
+      .accordion{
+        width: 100%;
+        padding: 0rem 1rem;
+
+        &-head{
+          width: 100%;
+        }
+
+        &-bottom{
+          width: 100%;
+        }
+
+
+      }
+
+      .activeAccordionBody{
+        width: 100%;
+      }
+    }
+}

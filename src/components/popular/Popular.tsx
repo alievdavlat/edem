@@ -9,7 +9,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay , Navigation, FreeMode} from 'swiper/modules';
 
 const Popular = () => {
   
@@ -31,6 +31,12 @@ const Popular = () => {
         pagination={{
           clickable: true,
         }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+      
+        navigation={true}
         breakpoints={{
           375: {
             slidesPerView: 3,
@@ -53,7 +59,7 @@ const Popular = () => {
             spaceBetween: 40,
           },
         }}
-        modules={[Pagination, Autoplay]}
+        modules={[Autoplay, Pagination,  FreeMode, Navigation]}
         className="popular-content"
       >
           {
