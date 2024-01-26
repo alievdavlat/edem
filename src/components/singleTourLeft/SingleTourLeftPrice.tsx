@@ -2,10 +2,21 @@ import React from 'react'
 import { FaCheck } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import leaf from '../../assets/images/leaf.png'
+import { useLocale } from '@/hooks/useLocale';
 
-type Props = {}
+interface IpriceIncludesListItem {
+  text_ru: string,
+  text_uz:string
+}
+type Props = {
+  priceIncludes:any;
+  priceDoesNotInclude:any;
 
-const SingleTourLeftPrice = (props: Props) => {
+}
+
+const SingleTourLeftPrice:React.FC<Props> = ({priceIncludes,priceDoesNotInclude}) => {
+  const locale = useLocale()
+
   return (
     <div className='singleTourLeft-price'>
         <div className='singleTourLeft-price-leaf'>
@@ -13,39 +24,29 @@ const SingleTourLeftPrice = (props: Props) => {
         </div>
       <div className='singleTourLeft-price-includes'> 
         <div className='section-title2'>
-          <h2>Стоимость включает</h2>
+          <h2>
+            {
+              locale == 'uz'
+               ? priceIncludes?.title_uz
+               : priceIncludes?.title_ru
+            }
+          </h2>
         </div>
         <ul>
+          {
+            priceIncludes?.priceIncludes_data?.priceIncludes?.map((item:IpriceIncludesListItem) => (
           <li>
             <span>
-              Авиаперелет (прямой рейс)
+            {
+              locale == 'uz'
+               ? item?.text_uz
+               : item?.text_ru
+            }
             </span>
           </li>
-          <li>
-            <span>
-            Проживание
-            </span>
-          </li>
-          <li>
-            <span>
-            Питание все включено
-            </span>
-          </li>
-          <li>
-            <span>
-            Трансфер групповой
-            </span>
-          </li>
-          <li>
-            <span>
-            Мед. страховка
-            </span>
-          </li>
-          <li>
-            <span>
-            Услуги фирмы
-            </span>
-          </li>
+            ))
+          }
+
         <div className='singleTourLeft-price-includes-badge'>
         <FaCheck />
         </div> 
@@ -55,21 +56,29 @@ const SingleTourLeftPrice = (props: Props) => {
 
       <div className='singleTourLeft-price-notincludes'>
         <div className='section-title2'>
-          <h2>Стоимость не включает</h2>
+          <h2>
+          {
+              locale == 'uz'
+               ? priceDoesNotInclude?.title_uz
+               : priceDoesNotInclude?.title_ru
+            }
+          </h2>
         </div>
 
         <ul>
+        {
+            priceDoesNotInclude?.priceDoesNotInclude_data?.priceDoesNotInclude?.map((item:IpriceIncludesListItem) => (
           <li>
             <span>
-            Дополнительные экскурсии
+            {
+              locale == 'uz'
+               ? item?.text_uz
+               : item?.text_ru
+            }
             </span>
           </li>
-
-          <li>
-            <span>
-            Дополнительные экскурсии
-            </span>
-          </li>
+            ))
+          }
         <div className='singleTourLeft-price-notincludes-badge'>
         <IoMdClose />
         </div>

@@ -1,21 +1,35 @@
+import { useLocale } from "@/hooks/useLocale";
 import React from "react";
 
-type Props = {};
+type Props = {
+  title_ru:string;
+  title_uz:string;
+  description_ru:string;
+  description_uz:string;
+};
 
-const SingleTourLeftAbout = (props: Props) => {
+const SingleTourLeftAbout:React.FC<Props> = ({description_ru, title_ru,  title_uz, description_uz   }) => {
+
+  const locale = useLocale()
+
   return (
     <div className="singleTourLeft-about">
       <div className="section-title2">
-        <h2>О туре</h2>
+        <h2>
+          {
+            locale == 'uz'
+            ? title_uz
+            : title_uz
+          }
+        </h2>
       </div>
 
       <p>
-        Пляжный сезон в Анталье не заканчивается! Турция в этом году бьет все
-        погодные рекорды! Впервые в истории температура воздуха летом поднялась
-        до 49,5°C, а осень продолжает радовать нас теплым морем и ласковым
-        солнцем. Шикарные отели-резорты во всю снижают свои чеки на проживание!
-        Успейте запрыгнуть в «летний вагон» и не забудьте взять cолнцезащитный
-        крем. Вылетаем прямым рейсом из Ташкента на крыльях Uzbekistan Airways.
+          {
+            locale == 'uz'
+            ? description_uz
+            : description_ru
+          }
       </p>
     </div>
   );

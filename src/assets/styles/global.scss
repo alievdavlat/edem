@@ -116,6 +116,10 @@ body {
   padding: 0;
   margin: 0;
 }
+.mobile-menu {
+	display: none;
+}
+
 
 .layout {
   width: 100%;
@@ -261,6 +265,14 @@ strong {
   margin: 0 auto;
 }
 
+.home{
+
+  &-tours{
+    margin: 5rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19.3rem, 1fr) ) ;
+  }
+}
 .fadeIn {
   animation: fadeIn 0.5s forwards ease-in;
   transition: all 0.3s;

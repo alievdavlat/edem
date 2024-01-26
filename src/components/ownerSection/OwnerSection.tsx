@@ -4,9 +4,27 @@ import quoteBottom from "../../assets/images/quote.svg";
 import owner from '../../assets/images/about-sect-wommen.png'
 import leaf from '../../assets/images/leaf.png'
 import './ownerSection.css'
+import { useLocale } from "@/hooks/useLocale";
+import api from "@/service/api";
+import { getEnv } from "@/helpers";
 type Props = {};
 
 const OwnerSection = (props: Props) => {
+const locale = useLocale()
+const [ownerData , setOwwnerData] = React.useState<any>([])
+const imageUrl = getEnv('image')
+React.useEffect(() => {
+
+  const getData = async () => {
+    const data =  await api.getOwnerData()
+    setOwwnerData(data)
+  }	
+  getData()
+
+}, [])
+
+
+
   return (
     <div className="ownerSection">
 
@@ -19,50 +37,93 @@ const OwnerSection = (props: Props) => {
 
           <div className="ownerSection-left">
             <h4 className="ownerSection-left-title">
-              Приветственное слово руководителя компании
+             {
+              locale == 'uz'
+              ? ownerData?.title_uz
+              : ownerData?.title_ru
+             }
             </h4>
             <div className="ownerSection-left-descr">
-              <p>
+              {
+                locale == 'uz'
+                ? 
+                <p>
+                <img
+                  src={quoteTop.src}
+                  alt="quote"
+                  className="ownerSection-left-descr-quoteTop"
+                />
+                 {ownerData?.description_uz?.slice(0,25)} <strong>{ownerData?.description_uz?.slice(25, 39)}</strong> 
+                 {ownerData?.description_uz?.slice(39,63)}
+                 {ownerData?.description_uz?.slice(39,63)} <strong>{ownerData?.description_uz?.slice(63, 71)}</strong>
+                 {ownerData?.description_uz?.slice(71, 235)}
+                  <br />
+                  {ownerData?.description_uz?.slice(235, 432)}
+                   <strong>{ownerData?.description_uz?.slice(432, 440)}</strong>
+                   {ownerData?.description_uz?.slice(440, 455)}
+                  <strong>{ownerData?.description_uz?.slice(455, 462)}</strong>
+                  {ownerData?.description_uz?.slice(462, 560)}
+                  <br />
+                  {ownerData?.description_uz?.slice(560)}
+                <img
+                  src={quoteBottom.src}
+                  alt="quote"
+                  className="ownerSection-left-descr-quoteBottom"
+                />
+                </p>
+                : 
+                <p>
               <img
                 src={quoteTop.src}
                 alt="quote"
                 className="ownerSection-left-descr-quoteTop"
               />
-                Здравствуйте. Меня зовут <strong>Яна Нисенблат,</strong> я –
-                основатель компании <strong>Edem.uz.</strong> Моя карьера
-                начиналась в 2000-х с работы в пятизвёздочных отелях Sheraton и
-                Le Meridian в Ташкенте. В 2004 году работала в Великобритании, в
-                Grand Hotel Llandudno.
-                <br />В международных гостиничных сетях я проходила тренинги,
-                обучающие работать по стандартам качества. Этот опыт и знания
-                являются основой в выборе гостиниц и стиля отдыха для наших
-                туристов. Компания <strong>Edem.uz</strong> была создана в{" "}
-                <strong>2007 г.</strong> С этого момента для более 7000
-                узбекистанцев был организован первоклассный отдых в 45 стран
-                мира.
+               {ownerData?.description_ru?.slice(0,25)} <strong>{ownerData?.description_ru?.slice(25, 39)},</strong> 
+               {ownerData?.description_ru?.slice(39,63)}
+               {ownerData?.description_ru?.slice(39,63)} <strong>{ownerData?.description_ru?.slice(63, 71)}.</strong>
+               {ownerData?.description_ru?.slice(71, 235)}
                 <br />
-                Вас ожидает уверенность и грамотная организация тура с учетом
-                вкусов и запросов, основанные на профессионализме.
+                {ownerData?.description_ru?.slice(235, 432)}
+                 <strong>{ownerData?.description_ru?.slice(432, 440)}</strong>
+                 {ownerData?.description_ru?.slice(440, 455)}
+                <strong>{ownerData?.description_ru?.slice(455, 462)}</strong>
+                {ownerData?.description_ru?.slice(462, 560)}
+                <br />
+                {ownerData?.description_ru?.slice(560)}
               <img
                 src={quoteBottom.src}
                 alt="quote"
                 className="ownerSection-left-descr-quoteBottom"
               />
               </p>
+              }
+              
             </div>
           </div>
 
           <div className="ownerSection-right">
             <div className="ownerSection-right-image">
-              <img src={owner.src} alt="women" />
+              <img src={ ownerData?.avatar?.data[0]?.attributes?.url && imageUrl + ownerData?.avatar?.data[0]?.attributes?.url} alt="women" />
             </div>
 
               <div className="ownerSection-right-line"></div>
 
                 <div className="ownerSection-right-info">
-                  <p>С большим уважением,</p>
-                  <h3>Яна Нисенблат</h3>
-                  <p>основатель и руководитель Edem.uz</p>
+                  <p>
+                    {
+                      locale == 'uz'
+                      ? ownerData?.text_uz?.slice(0, 19)
+                      : ownerData?.text_ru?.slice(0, 20)
+                    }
+                  </p>
+                  <h3>{locale == 'uz' ? ownerData?.owner_name_uz : ownerData?.owner_name_ru}</h3>
+                  <p>
+                   {
+                      locale == 'uz'
+                      ? ownerData?.text_uz?.slice(19)
+                      : ownerData?.text_ru?.slice(20)
+                    }
+                  </p>
                 </div>
           </div>
         </div>

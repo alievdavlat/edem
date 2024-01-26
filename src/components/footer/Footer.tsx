@@ -4,10 +4,11 @@ import Link from "next/link";
 import logo from "../../assets/images/logo.svg";
 import logoFooter from "../../assets/images/logo-footer-mob.svg";
 import { IoLocation } from "react-icons/io5";
-import { phoneNumbers } from "@/constants";
 import { MapComp } from "..";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosArrowUp } from "react-icons/io";
+import api from "@/service/api";
+import { useLocale } from "@/hooks/useLocale";
 
 const Footer = () => {
  const  scrollToTop = () => {
@@ -16,6 +17,22 @@ const Footer = () => {
     behavior: 'smooth' 
   });
 };
+
+const locale = useLocale()
+const [phoneNumbers, setPhoneNumbers] = React.useState<any>([])
+
+const [mainData , setMainData] = React.useState<any>([])
+React.useEffect(() => {
+
+  const getData = async () => {
+    const data =  await api.getMainData()
+    setPhoneNumbers(data?.phone?.phone_numbers);
+    setMainData(data)
+  }	
+  getData()
+
+}, [])
+
 
   return (
     <footer className="footer" id="footer">
@@ -38,16 +55,32 @@ const Footer = () => {
 
               <div className="footer-top-nav-address-title">
                 <IoLocation />
-                <h4>Адрес</h4>
+                <h4>{locale == 'uz' ? 'Manzil':"Адрес"}</h4>
               </div>
 
-              <p>
+              {
+                locale == 'uz'
+                ? 
+                <p>
                 <strong>
-                  Узбекистан, г. Ташкент (массив Киет 5, дом 74, офис 4)
+                 {
+                  mainData?.address_uz?.slice(0,60)
+                 }
                 </strong>
                 <br />
-                Ориентир: напротив - "Памятник Мужества"
+               {mainData?.address_uz?.slice(60)}
               </p>
+                : 
+                <p>
+                <strong>
+                 {
+                  mainData?.address_ru?.slice(0,60)
+                 }
+                </strong>
+                <br />
+               {mainData?.address_ru?.slice(60)}
+              </p>
+              }
             </div>
 
               <div className="footer-top-nav-phones">
@@ -56,14 +89,18 @@ const Footer = () => {
               <FaPhoneAlt />
 
                 <h4>
-                Телефон
+                 {
+                  locale == 'uz'
+                  ? "Telifon"
+                  : 'Телефон'
+                 }
                 </h4>
               </div>
 
               <ul>
               
-              {phoneNumbers.map((item) => (
-                <li>
+              {phoneNumbers.map((item:string) => (
+                <li key={item}>
                   <a href={`tel:${item}`}>{item}</a>
                 </li>
               ))}

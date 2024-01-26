@@ -6,14 +6,39 @@ import FeadBackDone from './feedback/FeadBackDone'
 import { openModal } from '@/redux/features/modalSlice'
 import { useDispatch } from 'react-redux'
 import { IoCloseSharp } from 'react-icons/io5'
+import { useLocale } from '@/hooks/useLocale'
+import api from '@/service/api'
 
-const FeadbackModal = (props: Props) => {
+const FeadbackModal = () => {
+
+	
+  const [feedbackData, setFeedbackData]  = React.useState<any>([])
+  const locale = useLocale()
+
+  React.useEffect(() => {
+
+    const getData = async () => {
+      const feedback =   await api.getFeedbackData()
+      setFeedbackData(feedback);
+  
+      
+    }	
+    getData()
+  
+  }, [])
+	console.log(feedbackData?.attributes);
+
+	
   const dispatch = useDispatch()
   return (
     <div className="feedback">
 		<div className="feedback-content">
 			<div className="feedback__title">
-				Заявка
+				{
+					locale == 'uz'
+					? feedbackData?.attributes?.title_uz
+					: feedbackData?.attributes?.title_ru
+				}
 			</div>
 			
       <div className="feedback__close" id='closeIcon' onClick={() => dispatch(openModal({child:null, open:false}))}>
@@ -24,17 +49,25 @@ const FeadbackModal = (props: Props) => {
 
 			<div className="feedback-wrap">
 				<div className="feedback__text">
-					Оставьте свои контактные данные, и наш менеджер расскажет больше интересных деталей
+				{
+					locale == 'uz'
+					? feedbackData?.attributes?.description_uz
+					: feedbackData?.attributes?.description_ru
+				}
 				</div>
 				<form action="#" className="feedback-form form">
-					<input type="text" required placeholder="Ваше имя" className="form_name" />
-					<input type="tel" required placeholder="Номер телефона" className="form_tel" />
+					<input type="text" required placeholder={locale === 'uz' ? feedbackData?.attributes?.placeholderName_uz : feedbackData?.attributes?.placeholderName_ru} className="form_name" />
+					<input type="tel" required placeholder={locale === 'uz' ? feedbackData?.attributes?.placeholderPhone_uz : feedbackData?.attributes?.placeholderPhone_ru}className="form_tel" />
 					<button>
-						Отправить
+					{
+					locale == 'uz'
+					? feedbackData?.attributes?.buttonText_uz
+					: feedbackData?.attributes?.buttonText_ru
+					}
 					</button>
 				</form>
 			</div>
-			{/* <FeadBackDone/> */}
+			{/* <FeadBackDone /> */}
 		</div>
 	</div> 
    )

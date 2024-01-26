@@ -1,56 +1,49 @@
 import React from 'react'
 import sunWithStar from '../../assets/images/sunWithStar.svg'
-type Props = {}
+import { useLocale } from '@/hooks/useLocale';
 
-const SingleTourLeftPeculiarities = (props: Props) => {
+interface IPeculiaritiesListItem {
+  text_ru: string,
+  text_uz:string
+}
+type Props = {
+  title_ru:string;
+  title_uz:string;
+  peculiarities_list:IPeculiaritiesListItem[]
+}
+
+const SingleTourLeftPeculiarities:React.FC<Props> = ({title_ru, title_uz,  peculiarities_list}) => {
+  const locale = useLocale()
+
   return (
     <div className='singleTourLeft-peculiarities'>
        <div className="section-title2">
-        <h2>Особенности</h2>
+        <h2>
+          {
+            locale === 'uz'
+            ? title_uz
+            : title_ru
+          }
+        </h2>
       </div>
 
       <ul>
+        {
+          peculiarities_list?.map((item:IPeculiaritiesListItem) => (
         <li>
           <div>
             <img src={sunWithStar.src} alt="ico" />
           </div>
-          <span>Прямые рейсы с авиаперелетом из Ташкента</span>
+          <span>
+          {
+            locale === 'uz'
+            ? item?.text_uz
+            : item?.text_ru
+          }
+          </span>
         </li>
-
-        <li>
-          <div>
-            <img src={sunWithStar.src} alt="ico" />
-          </div>
-          <span>Приятные цены, возможность забронировать только проживание или проживание + трансфер, выгодная стоимость пакетных туров</span>
-        </li>
-
-        <li>
-          <div>
-            <img src={sunWithStar.src} alt="ico" />
-          </div>
-          <span>План питания «Все включено»</span>
-        </li>
-
-        <li>
-          <div>
-            <img src={sunWithStar.src} alt="ico" />
-          </div>
-          <span>Отели на любой вкус – от бюджетных 4* до премиальных 5*</span>
-        </li>
-
-        <li>
-          <div>
-            <img src={sunWithStar.src} alt="ico" />
-          </div>
-          <span>Удобный подбор тура и поддержка туристов 24/7</span>
-        </li>
-
-        <li>
-          <div>
-            <img src={sunWithStar.src} alt="ico" />
-          </div>
-          <span>ВИП туры, виллы - под запрос!</span>
-        </li>
+          ))
+        }
       </ul>
     </div>
   )

@@ -19,3 +19,142 @@ responseve reviw
 pagination tours page 
 
 show more home da
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Турция
+
+Turkiya
+8 дней / 7 ночей
+8 kun / 7 kecha
+18.11.23 dan 04.01.24 gacha
+с 18.11.23 по 01.04.24
+Всё включено
+Hammasi o'z ichiga oladi
+8 000 000 so'mdan boshlangich tolov
+от 8 000 000 сум/чел
+Прямой рейс
+To'g'ridan-to'g'ri parvoz
+2 человек
+2 ta odam
+Ежедневный тур
+Kundalik sayohat
+По прилету
+Kelgandan keyi
+Включена
+Bor
+О туре  
+Ekskursiya haqida
+ Пляжный сезон в Анталье не заканчивается! Турция в этом году бьет все         погодные рекорды! Впервые в истории температура воздуха летом поднялась         до 49,5°C, а осень продолжает радовать нас теплым морем и ласковым         солнцем. Шикарные отели-резорты во всю снижают свои чеки на проживание!         Успейте запрыгнуть в «летний вагон» и не забудьте взять cолнцезащитный         крем. Вылетаем прямым рейсом из Ташкента на крыльях Uzbekistan Airways.
+ Antaliyada plyaj mavsumi tugamaydi! Turkiya bu yil hamma narsadan ustun keldi         ob-havo rekordlari! Tarixda birinchi marta yozda havo harorati ko'tarildi         49,5 ° S gacha, kuz esa bizni iliq dengiz va muloyimlik bilan xursand qilishda davom etmoqda.         quyosh. Hashamatli mehmonxona-kurortlar turar joy uchun cheklarini pasaytirmoqda!         "Yozgi poezdda" sakrashga shoshiling va quyoshdan himoya qilishni unutmang         krem. Biz Toshkentdan to‘g‘ridan-to‘g‘ri “O‘zbekiston havo yo‘llari” qanotlarida uchamiz.
+ Отели
+  Mehmonxonalar
+  {
+  "five_star_hotels": [
+    "RAMADA RESORT BY WYNDHAM SIDE от 8,7 млн",
+    "ORANGE COUNTY KEMER от 9,1 млн",
+    "ORANGE COUNTY BELEK от 9,4 млн",
+    "AQUAWORLD BELEK BY MP HOTELS от 10,8 млн",
+    "DOBEDAN EXCLUSIVE HOTEL & SPA (EX.ALVA DONNA EXCLUSIVE HOTEL & SPA) от 11,7 млн",
+    "IC HOTELS GREEN PALACE от 11,8 млн",
+    "RIXOS PARK BELEK от 12,6 млн",
+    "DELPHIN BE GRAND RESORT от 13,1 млн",
+    "BELLIS DELUXE HOTEL от 13,3 млн"
+  ]
+}
+
+  {
+    "four_star_hotels": [
+      "ELAMIR RESORT HOTEL от 8,1 млн",
+      "HEDEF KLEOPATRA HOTEL от 9,4 млн"
+    ]
+  }
+
+Особенности
+Xususiyatlari
+{
+  "peculiarities": [
+    {
+      "text_ru": "Прямые рейсы с авиаперелетом из Ташкента",
+      "text_uz": "Toshkentdan to'g'ridan-to'g'ri reyslar"
+    },
+    {
+      "text_ru": "Приятные цены, возможность забронировать только проживание или проживание + трансфер, выгодная стоимость пакетных туров",
+      "text_uz": "Yaxshi narxlar, faqat turar joy yoki turar joyni bron qilish imkoniyati + transfer, paketli turlar uchun qulay narxlar"
+    },
+    {
+      "text_ru": "План питания «Все включено»",
+      "text_uz": "Hamma narsa inklyuziv ovqatlanish rejasi"
+    },
+    {
+      "text_ru": "Отели на любой вкус – от бюджетных 4* до премиальных 5*",
+      "text_uz": "Har qanday lazzat uchun mehmonxonalar - byudjet 4* dan premium 5* gacha"
+    },
+    {
+      "text_ru": "Удобный подбор тура и поддержка туристов 24/7",
+      "text_uz": "Qulay tur tanlash va 24/7 turistlarni qo'llab-quvvatlash"
+    },
+    {
+      "text_ru": "ВИП туры, виллы - под запрос!",
+      "text_uz": "VIP turlar, villalar - so'rov bo'yicha!"
+    }
+  ]
+}
+
+  Стоимость включает
+Narx o'z ichiga oladi
+{
+  "priceIncludes": [
+    {
+      "text_ru": "Авиаперелет (прямой рейс)",
+      "text_uz": "Havo sayohati (to'g'ridan-to'g'ri parvoz)"
+    },
+    {
+      "text_ru": "Проживание",
+      "text_uz": "Yashash Joyi"
+    },
+    {
+      "text_ru": "Питание все включено",
+      "text_uz": "Taom puli ichida"
+    },
+    {
+      "text_ru": "Трансфер групповой",
+      "text_uz": "Guruh o'tkazish"
+    },
+    {
+      "text_ru": "Мед. страховка",
+      "text_uz": "Straxovka"
+    },
+    {
+      "text_ru": "Услуги фирмы",
+      "text_uz": "Firma xizmatlari"
+    }
+  ]
+}
+
+        Стоимость не включает
+        Narxga kirmaydi
+
+        {
+  "priceDoesNotInclude": [
+    {
+      "text_ru": "Дополнительные экскурсии",
+      "text_uz": "Ixtiyoriy ekskursiyalar"
+    },
+    {
+      "text_ru": "Карманные расходы",
+      "text_uz": "Hamyonbob xarajatlar"
+    }
+  ]
+}

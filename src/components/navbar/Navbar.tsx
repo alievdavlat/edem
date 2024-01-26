@@ -1,21 +1,43 @@
-import { NavbarItems, phoneNumbers } from '@/constants'
+import { NavbarItems } from '@/constants'
 import Link from 'next/link'
 import React from 'react'
 import ruFlag from '../../assets/images/ru-flag.svg'
+import flag_uz from '../../assets/images/flag_uz.svg'
 import logo from '../../assets/images/logo.svg'
 import { FaPhoneAlt } from "react-icons/fa";
 import menu from '../../assets/images/menu.svg'
 import './navbar.css'
 import { useDispatch } from 'react-redux'
 import { openModal } from '@/redux/features/modalSlice'
+import { useLocale } from '@/hooks/useLocale'
+import api from '@/service/api'
+import { IoMdClose } from "react-icons/io";
 
 
+type Props = {
+  setShowMobimenu:(showMobiMenu:boolean) => void;
+  showMobiMenu:boolean;
+}
 
-const Navbar = () => {
+const Navbar:React.FC<Props> = ({setShowMobimenu, showMobiMenu}) => {
 
   const dispatch = useDispatch()
-  
+  const locale = useLocale()  
 
+  const [phoneNumbers, setPhoneNumbers] = React.useState<any>([])
+
+	React.useEffect(() => {
+	
+    const getData = async () => {
+      const data =  await api.getMainData()
+      setPhoneNumbers(data?.phone?.phone_numbers);
+		}	
+		getData()
+
+	}, [])
+
+  
+  
   
   return (
     <header className='header'>
@@ -25,8 +47,13 @@ const Navbar = () => {
 
             <div className='header-navigation-mobile'>
 
-            <div className='header-navigation-menu'>
-              <img src={menu.src} alt="menu" />
+            <div className='header-navigation-menu' onClick={() => setShowMobimenu(!showMobiMenu)}>
+              {
+                !showMobiMenu 
+                ? <img src={menu.src} alt="menu" />
+                : <IoMdClose />
+
+              }
             </div>
               
             <a href={`tel:${phoneNumbers[0]}`} className='header-navigation-phoneIcon'>
@@ -45,9 +72,9 @@ const Navbar = () => {
                   <li key={item.id}>
                   {
                     item.path == 'footer'
-                    ? <a href={`#${item.path}`} >{item.text_ru}</a>
+                    ? <a href={`#${item.path}`} >{locale == 'uz' ? item.text_uz :  item.text_ru}</a>
                     : <Link href={`${item.path}`}>
-                    {item.text_ru}
+                   {locale == 'uz' ? item.text_uz :  item.text_ru}
                   </Link>
                   }
                   </li>
@@ -57,10 +84,19 @@ const Navbar = () => {
 
             <div className='header-navigation-right'>
 
-              <div className='header-navigation-right-lang' onClick={() => dispatch(openModal({child:1, open:true}))}>
+              {
+                locale == 'ru'
+                ? 
+                <div className='header-navigation-right-lang' onClick={() => dispatch(openModal({child:1, open:true}))}>
                 <img src={ruFlag.src} alt="flag_ru" />
                 <span>Ру</span>
               </div>
+              : 
+              <div className='header-navigation-right-lang' onClick={() => dispatch(openModal({child:1, open:true}))}>
+                <img src={flag_uz.src} alt="flag_uz" />
+                <span>Uz</span>
+              </div>
+              }
 
               <div className='header-navigation-right-contact'>
                 <a href={`tel:${phoneNumbers[0]}`} className='header-navigation-phoneIcon'>

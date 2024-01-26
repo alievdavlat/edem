@@ -35,10 +35,11 @@
   }
 
   &-info{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
+    // display: flex;
+    // align-items: center;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(10rem, 1fr) ) ;
     &-item{
       display: flex;
       margin-bottom: 1.75rem;

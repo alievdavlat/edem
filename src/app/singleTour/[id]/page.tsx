@@ -5,21 +5,27 @@ import React from 'react'
 import SingleTourForm from '../../../components/singleTourForm/SingleTourForm'
 import leaf from '../../../assets/images/leaf-right.png'
 import SingleTourLeft from '@/components/singleTourLeft/SingleTourLeft'
-type Props = {}
+import { useLocale } from '@/hooks/useLocale'
 
 const page = ({params}:any) => {
   const id  = params?.id
-  
+  const locale = useLocale()
+
+
   return (
     <div className='singleTour '>
-        <SingleTourHero/>
+        <SingleTourHero id={id}/>
         <div className='singleTour-mobileContact'>
-           Оставить заявку
+          {
+            locale == 'uz'
+            ? 'Arizangizni yuboring'
+            : 'Оставить заявку'
+          }
         </div>
         <div className="singleTour-content bag">
 
         <div className="container">
-        <SingleTourLeft/>
+        <SingleTourLeft id={id}/>
         <SingleTourForm/>
         </div>
         

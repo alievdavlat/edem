@@ -4,6 +4,9 @@ import TelegramIco from "../../assets/images/telegram.svg";
 import InstagramIco from "../../assets/images/instagram.svg";
 import socialImage from "../../assets/images/socials-image.png";
 import "./social.css";
+import { getEnv } from "@/helpers";
+import { useLocale } from "@/hooks/useLocale";
+import api from "@/service/api";
 type Props = {};
 
 const social = [
@@ -28,19 +31,36 @@ const social = [
 ];
 
 const Socials = (props: Props) => {
+
+  const locale = useLocale()
+  const imageUrl = getEnv('image')
+  const [socialData, setSocialData] = React.useState<any>([])
+
+	React.useEffect(() => {
+	
+    const getData = async () => {
+      const data =  await api.getMainData()   
+      setSocialData(data);
+		}	
+		getData()
+
+	}, [])
+
+  
+  
   return (
     <section className="social bag">
       <div className="container">
         <div className="social-card">
           <div className="social__bg">
-            <img src={socialImage.src} alt="social" />
+            <img src={socialData?.social_bg?.data?.attributes?.url ? imageUrl + socialData?.social_bg?.data?.attributes?.url : socialImage.src} alt="social" />
           </div>
           <div className="social-wrap">
             <div className="social-list">
-              <h4 className="social__title">Подпишитесь на нас в соцсетях</h4>
+              <h4 className="social__title">{locale == 'uz' ? socialData?.social_text_uz : socialData?.social_text_ru}</h4>
 
               {social.map((item) => (
-                <a href={item.link} className="social-item" target="_blank">
+                <a href={item.link} key={item.id} className="social-item" target="_blank">
                   <img src={item.image.src} alt="ico" />
                   <p>{item.name}</p>
                 </a>

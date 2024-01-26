@@ -3,9 +3,28 @@ import leafImage from "../../assets/images/leaf.png";
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
 import { ExclusiveMobile } from "..";
 import "./exclusive.css";
-type Props = {};
+import { useLocale } from "@/hooks/useLocale";
+import api from "@/service/api";
+import { getEnv } from "@/helpers";
+
 
 const Exclusive = () => {
+
+  const [exclusiveData , setExclusiveData] = React.useState<any>([])
+  const locale = useLocale()
+  const imageUrl = getEnv('image')
+	React.useEffect(() => {
+	
+    const getData = async () => {
+			
+      const data =  await api.getExclusive()     
+      setExclusiveData(data);
+		}	
+		getData()
+
+	}, [])
+
+
   return (
     <section className="exclusive">
       <div className="exclusive-leaf">
@@ -13,25 +32,52 @@ const Exclusive = () => {
       </div>
 
       <div className="container">
-        <div className='exclusive-content' >
+        <div className='exclusive-content' style={{backgroundImage:`url(${imageUrl + exclusiveData?.bg?.data?.attributes?.url})`}}>
 
               <div className='exclusive-content-tooltip'>
-              Эксклюзивные туры
+              {
+                locale === 'uz'
+                ? exclusiveData?.main_title_uz
+                : exclusiveData?.main_title_ru
+              }
               </div>
               <div className='exclusive-content-bottom'>
                 <div className='exclusive-content-bottom-text'>
-                  <h3>Новогодние туры 2024</h3>
-                  <h5>13 направлений</h5>
+                  <h3>
+                  
+                    {
+                      locale === 'uz'
+                      ? exclusiveData?.title_uz
+                      : exclusiveData?.title_ru
+                    }
+                  </h3>
+                  <h5>
+                     {
+                      locale === 'uz'
+                      ? exclusiveData?.day_uz
+                      : exclusiveData?.day_ru
+                    }
+                  </h5>
 
                   <p>
-                  Не упустите шанс встретить Новый год в удивительном путешествии! Планируйте свой Новый год сегодня, выбирая тур, который вдохновит и наполнит вас эмоциями.
+                    {
+                      locale === 'uz'
+                      ? exclusiveData?.descr_uz
+                      : exclusiveData?.descr_ru
+                    }
                   </p>
 
                 </div>
 
                  
             <button>
-            <span>Подробнее</span>
+            <span>
+                {
+                  locale === 'uz'
+                  ? exclusiveData?.btnText_uz
+                  : exclusiveData?.btnText_ru
+                }
+          </span>
               <div>
               <HiOutlineArrowUpRight />
               </div>
