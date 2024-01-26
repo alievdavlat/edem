@@ -6,10 +6,24 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay , Navigation, FreeMode} from "swiper/modules";
 import { HotToursData } from "@/constants";
 import { HotToursItem } from "..";
+import api from "@/service/api";
 
 type Props = {};
 
 const HotToursMobile = () => {
+  const [hotTours, setHotTours] = React.useState<any>([]);
+
+  
+  React.useEffect(() => {
+    const getData = async () => {
+      const HotTours = await api.getTours();
+      setHotTours(HotTours);
+    };
+
+    getData();
+  }, []);
+
+
   return (
     <Swiper
       slidesPerView={6}
@@ -27,8 +41,8 @@ const HotToursMobile = () => {
           spaceBetween: 10,
         },
         640: {
-          slidesPerView: 1,
-          spaceBetween: 30,
+          slidesPerView: 2,
+          spaceBetween: 50,
         },
         768: {
           slidesPerView: 2,
@@ -49,9 +63,17 @@ const HotToursMobile = () => {
       modules={[Autoplay, Pagination,  FreeMode, Navigation]}
 
       className="hotTours-mobileContent">
-      {HotToursData.map((item) => (
+      {hotTours.map((item:any) => (
         <SwiperSlide key={item.id}>
-          <HotToursItem {...item} key={item.id} />
+          <HotToursItem
+                item={item?.attributes}
+                imageUrl={
+                  item?.attributes?.images?.data[0]?.attributes?.url &&
+                  item?.attributes?.images?.data[0]?.attributes?.url
+                }
+                key={item.id}
+                id={item.id}
+              />
         </SwiperSlide>
       ))}
     </Swiper>

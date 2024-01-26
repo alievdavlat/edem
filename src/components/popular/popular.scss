@@ -99,6 +99,13 @@
 
 
     .swiper{
+      .swiper-pagination-lock{
+        display: none !important;
+      }
+      .swiper-pagination{
+        display: none !important;
+      
+      }
       .swiper-slide{
         width: fit-content !important;
         display: flex;
@@ -107,6 +114,8 @@
         justify-content: center;
       }
     }  
+
+  
   }
 }
 
