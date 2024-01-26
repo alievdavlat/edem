@@ -3,7 +3,7 @@
 import { AboutHero, Team, OwnerSection, AboutVideo } from "@/components"
 type Props = {}
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   return (
     <div>
       <AboutHero/>
@@ -14,4 +14,4 @@ const page = (props: Props) => {
   )
 }
 
-export default page
+export default Page

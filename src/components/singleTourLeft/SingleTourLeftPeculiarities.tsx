@@ -30,7 +30,7 @@ const SingleTourLeftPeculiarities:React.FC<Props> = ({title_ru, title_uz,  pecul
       <ul>
         {
           peculiarities_list?.map((item:IPeculiaritiesListItem) => (
-        <li>
+        <li key={item?.text_ru}>
           <div>
             <img src={sunWithStar.src} alt="ico" />
           </div>

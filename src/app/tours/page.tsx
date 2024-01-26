@@ -5,7 +5,7 @@ import ToursHero from "@/components/hero/toursHero/ToursHero";
 import api from "@/service/api";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   const [month, setMonth] = React.useState<string>("");
   const [country, setcountry] = React.useState<string>("");
 
@@ -54,4 +54,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

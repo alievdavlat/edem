@@ -35,7 +35,7 @@ const SingleTourLeftPrice:React.FC<Props> = ({priceIncludes,priceDoesNotInclude}
         <ul>
           {
             priceIncludes?.priceIncludes_data?.priceIncludes?.map((item:IpriceIncludesListItem) => (
-          <li>
+          <li key={item?.text_ru}>
             <span>
             {
               locale == 'uz'
@@ -68,7 +68,7 @@ const SingleTourLeftPrice:React.FC<Props> = ({priceIncludes,priceDoesNotInclude}
         <ul>
         {
             priceDoesNotInclude?.priceDoesNotInclude_data?.priceDoesNotInclude?.map((item:IpriceIncludesListItem) => (
-          <li>
+          <li key={item?.text_uz}>
             <span>
             {
               locale == 'uz'

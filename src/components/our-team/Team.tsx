@@ -47,7 +47,7 @@ React.useEffect(() => {
 			<ul className="team-list">
 				{
           team.map((item:any) => (
-           <TeamItem {...item?.attributes}/>
+           <TeamItem {...item?.attributes} key={item?.id}/>
           ))
         }
 			</ul>

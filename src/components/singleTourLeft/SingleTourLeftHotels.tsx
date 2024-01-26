@@ -29,7 +29,7 @@ const SingleTourLeftHotels: React.FC<Props> = ({
       <div className="singleTourLeft-hotels-wrapp">
         <div className="singleTourLeft-hotels-star">
           {fourStar?.map((item: number) => (
-            <div>
+            <div key={item}>
               <IoIosStar />
             </div>
           ))}
@@ -37,7 +37,7 @@ const SingleTourLeftHotels: React.FC<Props> = ({
 
         <ul className="singleTourLeft-hotels-list">
           {four_star_hotels?.map((item: string) => (
-            <li>
+            <li key={item}>
               <span>{item}</span>
             </li>
           ))}
@@ -47,7 +47,7 @@ const SingleTourLeftHotels: React.FC<Props> = ({
       <div className="singleTourLeft-hotels-wrapp">
         <div className="singleTourLeft-hotels-star">
           {fiveStar.map((item: number) => (
-            <div>
+            <div key={item}>
               <IoIosStar />
             </div>
           ))}
@@ -55,7 +55,7 @@ const SingleTourLeftHotels: React.FC<Props> = ({
 
         <ul className="singleTourLeft-hotels-list">
           {five_star_hotels?.map((item: string) => (
-            <li>
+            <li key={item}>
               <span>{item}</span>
             </li>
           ))}

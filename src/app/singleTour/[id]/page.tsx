@@ -7,7 +7,7 @@ import leaf from '../../../assets/images/leaf-right.png'
 import SingleTourLeft from '@/components/singleTourLeft/SingleTourLeft'
 import { useLocale } from '@/hooks/useLocale'
 
-const page = ({params}:any) => {
+const Page = ({params}:any) => {
   const id  = params?.id
   const locale = useLocale()
 
@@ -37,4 +37,4 @@ const page = ({params}:any) => {
   )
 }
 
-export default page
+export default Page

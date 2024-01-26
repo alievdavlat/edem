@@ -3,7 +3,7 @@ import { ContactForm, Exclusive, HomeHero, HotTours, HotToursItem, Popular, Soci
 import React from 'react'
 type Props = {}
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
   const [newData, setnewData] = React.useState<any>([])
 
   return (
@@ -37,4 +37,4 @@ const page = (props: Props) => {
   )
 }
 
-export default page
+export default Page
