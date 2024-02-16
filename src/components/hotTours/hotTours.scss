@@ -2,6 +2,8 @@
   position: relative;
   margin-top: 3rem;
   overflow: hidden;
+  padding-left: 3rem;
+
 &-btn{
   display: flex;
   align-items: center;
@@ -293,6 +295,7 @@ margin-top: 1.75rem;
 
 
   .hotTours{
+    padding-left: 0rem;
     .swiper{
       height: 45rem;
       
@@ -355,6 +358,7 @@ margin-top: 1.75rem;
 
 
   .hotTours{
+    padding-left: 0rem;
     .swiper{
       height: 40rem;
       .swiper-pagination-lock{
